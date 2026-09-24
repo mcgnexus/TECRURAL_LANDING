@@ -7,7 +7,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}:focus-visible{outline:3px solid #849f3c;outline-offset:3px}
 
 .source-note{font-size:11px;line-height:1.65;color:#718077;margin:18px 0 0;max-width:900px}.source-note a{color:var(--forest);text-decoration:underline;text-underline-offset:3px;font-weight:700}
-/* Ilustraciones científicas: esquemas originales, no fotografías de instalaciones reales. */
+/* Fotografías editoriales ilustrativas generadas para cada línea de investigación. */
 .research-visual-image{padding:15px;overflow:hidden}
 .line-illustration{display:block;width:100%;height:auto;border-radius:12px}
 .research-visual-image figcaption{line-height:1.5}
@@ -16,3 +16,14 @@
 .research-card .kicker{margin-bottom:2px}
 @media(max-width:850px){.research-thumb{height:130px}}
 @media(max-width:600px){.research-thumb{height:auto;aspect-ratio:2.35/1;object-fit:cover}.research-card{gap:3px}}
+.research-visual-image .line-illustration{aspect-ratio:3/2;object-fit:cover;border-radius:12px}
+.research-visual-image figcaption{font-size:11px;line-height:1.55}
+@media(max-width:600px){.research-visual-image{padding:11px}.research-visual-image .line-illustration{aspect-ratio:1.55/1}}
+.crop-context{display:flex;align-items:flex-start;gap:14px;margin:-22px 0 15px;padding:14px 17px;border-left:3px solid #8ca553;border-radius:0 11px 11px 0;background:#f0f4e9;color:#53655a;font-size:12px;line-height:1.55}
+.crop-context strong{flex:0 0 auto;color:var(--forest);font:700 12px Manrope,sans-serif}
+.crop-regions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:17px}
+.crop-regions p{margin:0!important;padding:11px 13px;border-radius:10px;background:#eef3e6;color:#53655a;font-size:12px!important}
+.crop-regions strong{color:var(--forest)}
+.region-image:after{content:'Imagen ilustrativa · Costa Tropical';position:absolute;left:12px;bottom:12px;padding:7px 10px;border-radius:8px;background:rgba(255,255,255,.9);color:#345545;font-size:10px;font-weight:700}
+.region-image{position:relative}
+@media(max-width:600px){.crop-context{display:block;margin:-14px 0 13px;padding:12px 14px}.crop-context strong{display:block;margin-bottom:3px}.crop-regions{grid-template-columns:1fr}.crop-regions p{font-size:11px!important}}
