@@ -59,3 +59,43 @@
   .mobile-cta{display:none}
   .research-footer{padding-bottom:30px}
 }
+
+/* El contenido explicativo y las leyendas mantienen un tamaño cómodo de lectura. */
+.breadcrumb{font-size:13px}
+.eyebrow{font-size:12px}
+.button{font-size:14px}
+.lead{font-size:18px}
+.stage{font-size:12px}
+.research-visual figcaption,.source-note,.disclaimer,.research-footer{font-size:12px}
+.research-visual-image figcaption{font-size:12px}
+.diagram-title{font-size:13px}
+.process-n{font-size:11px}
+.process-flow strong{font-size:14px}
+.process-flow span:last-child{font-size:12px}
+.section-intro{font-size:16px}
+.detail-card p,.detail-card ul,.commercial-band p{font-size:14px}
+.related-links a{font-size:13px}
+.research-cta p{font-size:14px}
+.crop-context{font-size:13px}
+.crop-context strong{font-size:13px}
+.crop-regions p{font-size:13px!important}
+.region-image:after{font-size:12px}
+@media(max-width:850px){.detail-card p,.detail-card ul,.commercial-band p{font-size:14px}}
+@media(max-width:600px){
+  .breadcrumb{font-size:12px}
+  .lead{font-size:16px}
+  .stage{font-size:12px}
+  .research-visual figcaption,.source-note,.disclaimer,.research-footer{font-size:12px}
+  .process-n{font-size:11px}
+  .process-flow strong{font-size:13px}
+  .process-flow span:last-child{font-size:12px}
+  .section-intro{font-size:14px}
+  .detail-card p,.detail-card ul,.commercial-band p,.research-cta p{font-size:14px}
+  .related-links a{font-size:14px}
+  .crop-context{font-size:13px}
+  .crop-regions p{font-size:12px!important}
+}
+@media(max-width:360px){
+  .process-flow strong{font-size:12px}
+  .process-flow span:last-child{font-size:11px}
+}

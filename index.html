@@ -178,6 +178,31 @@
       .founder-tags span{font-size:9px}
     }
 
+    /* Tipografía más legible: elimina microtexto en información relevante. */
+    .eyebrow,.kicker{font-size:12px}
+    .button{font-size:14px}
+    .hero-note,.photo-label,.proof{font-size:13px}
+    .service p,.cta p,.contact p,.founder-copy p,.region-copy p{font-size:15px}
+    .service .more,.plan p,.plan-note,.step p,.region-list,.contact small,.disclaimer,footer{font-size:12px}
+    .plan h3,.step h3{font-size:14px}
+    .step-n,.founder-tags span{font-size:12px}
+    .research-card p{font-size:14px}
+    .section-head>p{font-size:16px}
+    @media(max-width:760px){
+      .service p,.cta p,.contact p,.founder-copy p,.region-copy p{font-size:14px}
+      .section-head>p{font-size:15px}
+      .plan p,.step p,.region-list{font-size:13px}
+    }
+    @media(max-width:600px){
+      .hero-note,.photo-label,.proof,.plan-note,.contact small,.disclaimer{font-size:12px!important}
+      .service p,.cta p,.contact p,.founder-copy p,.region-copy p,.plan p,.step p,.region-list{font-size:14px}
+      .service .more{font-size:13px}
+      .plan h3,.step h3{font-size:14px}
+      .step-n,.founder-tags span{font-size:12px}
+      .footer-copy{font-size:12px}
+    }
+    @media(max-width:360px){.region-list{font-size:13px}.nav .nav-cta{font-size:10px}}
+
     .research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
     .research-card{display:flex;flex-direction:column;min-height:185px;padding:21px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:transform .2s,box-shadow .2s}
     .research-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
@@ -216,7 +241,7 @@
       <a class="research-card" href="investigacion/madurez-recoleccion/"><span class="kicker">08 · Calidad y cosecha</span><img class="research-thumb" src="assets/research/madurez-recoleccion.webp" alt="" loading="lazy"><h3>Madurez y momento de recolección</h3><p>Explorar indicadores como azúcares, grasas y otros parámetros de calidad.</p><span class="more">Explorar la línea ↗</span></a>
       <a class="research-card" href="investigacion/sensores-gases/"><span class="kicker">09 · Sensores de gases</span><img class="research-thumb" src="assets/research/sensores-gases.webp" alt="" loading="lazy"><h3>CO₂, etanol y compuestos volátiles</h3><p>Estudio de gases relacionados con procesos agrícolas, calidad y seguridad.</p><span class="more">Explorar la línea ↗</span></a>
     </div></section>
-    <div class="section-head" id="planes" style="margin:39px 0 15px"><div class="kicker">Una entrada gradual</div><h2 style="font-size:clamp(25px,3vw,34px);margin-bottom:6px">Empieza gratis. Amplía cuando lo necesites.</h2><p style="font-size:12px;margin:0">Estructura y precios previstos en el plan de empresa:</p></div>
+    <div class="section-head" id="planes" style="margin:39px 0 15px"><div class="kicker">Una entrada gradual</div><h2 style="font-size:clamp(25px,3vw,34px);margin-bottom:6px">Empieza gratis. Amplía cuando lo necesites.</h2><p style="font-size:15px;margin:0">Estructura y precios previstos en el plan de empresa:</p></div>
     <div class="plan-grid" aria-label="Planes previstos de TecRural"><article class="plan"><h3>TecRural Campo</h3><span class="plan-price">Gratis</span><p>Información básica, algunas alertas y uso limitado del diagnóstico asistido por IA.</p></article><article class="plan"><h3>TecRural Esencial</h3><span class="plan-price">9,90 €/mes</span><p>Alertas personalizadas, riesgos y plagas, históricos básicos, recomendaciones y diagnóstico ampliado.</p></article><article class="plan plan-featured"><h3>TecRural Monitor</h3><span class="plan-price">19,90 €/mes</span><p>Esencial más conexión de sensores, datos de suelo y ambiente, históricos ampliados y apoyo al riego.</p></article><article class="plan"><h3>TecRural Pro</h3><span class="plan-price">39,90 €/mes</span><p>Fitomonitorización, varios puntos de medida según configuración, estrés vegetal, informes y soporte prioritario.</p></article><article class="plan"><h3>Cooperativas</h3><span class="plan-price">Desde 79 €/mes</span><p>Varias explotaciones y usuarios, visión agregada e informes adaptados a cada grupo.</p></article></div>
     <p class="plan-note">Precios de planificación sujetos a validación comercial. Disponibilidad, alcance y hardware se confirman según cada explotación; no es necesario contratar sensores para empezar.</p>
     </section>
