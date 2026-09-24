@@ -7,6 +7,7 @@ Landing estática, responsive y sin dependencias de build. Está preparada para 
 - `assets/tecrural-logo.webp` y `assets/tecrural-icon.webp` son los archivos de marca aportados por TecRural.
 - `assets/olivar-sensores.webp` es una imagen ilustrativa generada para esta página; no representa una instalación real concreta.
 - `assets/manuel-carrasco-tecrural.webp` es el retrato aportado por el promotor y se utiliza en la sección de presentación.
+- `assets/research/*.webp` contiene nueve imágenes generadas para ilustrar las líneas de investigación. Son escenas conceptuales, no evidencia de productos o instalaciones ya validados.
 - Tipografía: Manrope para titulares y DM Sans para texto de interfaz, ambas servidas desde Google Fonts.
 - La descripción de servicios, el alcance del diagnóstico y los precios orientativos se ajustaron según la [Wiki TecRural](https://github.com/mcgnexus/WIKI_TECRURAL).
 - Los planes Campo, Esencial, Monitor, Pro y Cooperativas, y sus importes, proceden del plan de empresa. Se identifican en la página como precios de planificación pendientes de validación comercial.
@@ -45,4 +46,8 @@ La app enlazada recibe parámetros UTM distintos desde cada línea de investigac
 
 ## Diagramas y rigor de contenido
 
-Los esquemas de cada página están dibujados con HTML y CSS para mantenerse nítidos, accesibles y adaptables a móviles, sin depender de imágenes externas. Los estados separan la app meteorológica disponible de prototipos, investigación y funciones que todavía necesitan validación. No se presentan prototipos como sensores de seguridad ni los resultados de IA como diagnósticos definitivos.
+Cada línea de investigación usa una imagen editorial generada para explicar visualmente su posible aplicación. Las imágenes son ilustrativas: no documentan instalaciones ni productos ya validados. Los estados separan la app meteorológica disponible de prototipos, investigación y funciones que todavía necesitan validación. No se presentan prototipos como sensores de seguridad ni los resultados de IA como diagnósticos definitivos.
+
+## Ámbito territorial
+
+La landing contempla el Altiplano de Granada y la Costa Tropical. Los ejemplos de cultivo incluyen olivar, almendro y pistacho en el Altiplano, y mango, aguacate y chirimoya en la Costa Tropical. Son contextos objetivo para validar cada línea; no se implica que los modelos o sensores estén ya calibrados para todos esos cultivos.
