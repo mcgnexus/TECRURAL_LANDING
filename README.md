@@ -21,3 +21,28 @@ Landing estática, responsive y sin dependencias de build. Está preparada para 
 ## Desarrollo
 
 Abrir `index.html` directamente en un navegador. No requiere instalación ni compilación.
+
+
+## Líneas de investigación
+
+La portada presenta nueve páginas independientes para explicar la propuesta y comparar el interés por cada tema. Cada ruta `/investigacion/<linea>/` genera una página vista diferenciada en Vercel Web Analytics.
+
+- [App web: meteorología, alarmas y cálculo de riego](./investigacion/app-agroclimatica/)
+- [Minicentrales meteorológicas conectadas a red y con placas solares](./investigacion/estaciones-solares/)
+- [Sensores de humedad del suelo, temperatura foliar y crecimiento](./investigacion/fitomonitorizacion/)
+- [Medidas espectrales por reflexión y transmisión](./investigacion/analisis-espectral/)
+- [Identificación visual de insectos, patógenos y cambios de color](./investigacion/analisis-imagenes-ia/)
+- [Diagnóstico preliminar de enfermedades y carencias con IA](./investigacion/diagnostico-fotografico/)
+- [Análisis de suelo y lectura de resultados para la explotación](./investigacion/analisis-suelo/)
+- [Seguimiento de azúcares, grasas y otros indicadores de cosecha](./investigacion/madurez-recoleccion/)
+- [CO₂, etanol, monóxido de carbono y compuestos volátiles](./investigacion/sensores-gases/)
+
+## Medición de visitas
+
+El archivo `assets/analytics.js` carga el script oficial de Vercel Web Analytics en dominios Vercel (`*.vercel.app`, `tecrural.es` y `www.tecrural.es`). Para activar el conteo, despliega el repositorio en Vercel y habilita **Web Analytics** en el panel del proyecto. Después de desplegar de nuevo, consulta Analytics → Pages para comparar visitas por página. En GitHub Pages y en vista local no se carga el script. Las visitas indican interés de lectura, no por sí solas una solicitud comercial.
+
+La app enlazada recibe parámetros UTM distintos desde cada línea de investigación para facilitar el seguimiento de las entradas si esos parámetros se conservan en la analítica de la app.
+
+## Diagramas y rigor de contenido
+
+Los esquemas de cada página están dibujados con HTML y CSS para mantenerse nítidos, accesibles y adaptables a móviles, sin depender de imágenes externas. Los estados separan la app meteorológica disponible de prototipos, investigación y funciones que todavía necesitan validación. No se presentan prototipos como sensores de seguridad ni los resultados de IA como diagnósticos definitivos.
