@@ -27,3 +27,35 @@
 .region-image:after{content:'Imagen ilustrativa · Costa Tropical';position:absolute;left:12px;bottom:12px;padding:7px 10px;border-radius:8px;background:rgba(255,255,255,.9);color:#345545;font-size:10px;font-weight:700}
 .region-image{position:relative}
 @media(max-width:600px){.crop-context{display:block;margin:-14px 0 13px;padding:12px 14px}.crop-context strong{display:block;margin-bottom:3px}.crop-regions{grid-template-columns:1fr}.crop-regions p{font-size:11px!important}}
+
+/* Mejoras de ajuste para tablets, móviles pequeños y controles táctiles. */
+.research-hero>div,.research-visual,.detail-card,.commercial-band>div{min-width:0}
+.research-hero h1,.section-block h2,.detail-card h3,.commercial-band h3{overflow-wrap:anywhere}
+.button,.nav a,.related-links a{touch-action:manipulation}
+@media(max-width:760px){
+  .research-cta{display:block;padding:27px 24px}
+  .research-cta .button{width:100%;margin-top:18px;white-space:normal}
+  .commercial-band{gap:18px;padding:24px}
+  .related-links a{min-height:44px;display:flex;align-items:center}
+}
+@media(max-width:600px){
+  html,body{max-width:100%;overflow-x:clip}
+  .wrap{width:calc(100% - 32px)}
+  .research-main{padding-bottom:32px}
+  .research-visual{width:100%}
+  .process-flow li{min-width:0;overflow-wrap:anywhere}
+  .mobile-cta{bottom:calc(8px + env(safe-area-inset-bottom))}
+  .research-footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+}
+@media(max-width:360px){
+  .wrap{width:calc(100% - 24px)}
+  .research-hero h1{font-size:33px;letter-spacing:-1.3px}
+  .research-visual{padding:10px}
+  .process-flow li{padding:9px}
+  .process-flow strong{font-size:10px}
+  .process-flow span:last-child{font-size:9px}
+}
+@media(max-height:500px) and (orientation:landscape) and (max-width:900px){
+  .mobile-cta{display:none}
+  .research-footer{padding-bottom:30px}
+}
