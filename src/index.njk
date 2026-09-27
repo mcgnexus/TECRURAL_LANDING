@@ -1,30 +1,15 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f7f1">
-  <meta name="description" content="TecRural acerca meteorología agroclimática, diagnóstico vegetal con IA y sensores IoT a pequeños agricultores, cooperativas y entidades rurales del Altiplano y la Costa Tropical de Granada.">
-  <link rel="canonical" href="https://www.tecrural.es/">
-  <meta property="og:locale" content="es_ES">
-  <meta property="og:title" content="TecRural — Innovación con raíces">
-  <meta property="og:description" content="Tecnología útil, comprensible y asequible para el campo. Desde el Altiplano de Granada.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.tecrural.es/">
-  <meta property="og:site_name" content="TecRural">
-  <meta property="og:image" content="https://www.tecrural.es/assets/og/inicio.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Olivar del Altiplano de Granada con una estación agroclimática y un sensor de suelo">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.tecrural.es/assets/og/inicio.jpg">
-  <meta name="twitter:title" content="TecRural — Innovación con raíces">
-  <meta name="twitter:description" content="Tecnología útil, comprensible y asequible para el campo. Desde el Altiplano de Granada.">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <title>TecRural · Meteorología agroclimática, IA y sensores para el campo</title>
-  <link rel="icon" href="assets/tecrural-icon.webp" type="image/webp">
-  <link rel="preload" as="image" href="assets/olivar-sensores.webp" fetchpriority="high">
+---
+title: TecRural · Meteorología agroclimática, IA y sensores para el campo
+description: TecRural acerca meteorología agroclimática, diagnóstico vegetal con IA y sensores IoT a pequeños agricultores, cooperativas y entidades rurales del Altiplano y la Costa Tropical de Granada.
+canonicalPath: /
+ogTitle: TecRural — Innovación con raíces
+ogDescription: Tecnología útil, comprensible y asequible para el campo. Desde el Altiplano de Granada.
+ogImage: /assets/og/inicio.jpg
+ogImageAlt: Olivar del Altiplano de Granada con una estación agroclimática y un sensor de suelo
+heroPreload: /assets/olivar-sensores.webp
+---
+{% extends "layouts/base.njk" %}
+{% block headExtra %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -100,9 +85,8 @@
     ]
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{% endblock %}
+{% block styles %}
   <style>
     :root{--forest:#164b3b;--leaf:#54834c;--lime:#d7e6a1;--ink:#1d2b25;--muted:#66756c;--paper:#f6f7f1;--white:#fff;--line:#e3e8de;--gold:#d69d52;--shadow:0 20px 55px rgba(23,62,47,.15)}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.skip-link{position:absolute;left:-9999px;top:0;z-index:50;background:var(--forest);color:#fff;padding:12px 18px;border-radius:0 0 9px 0;font-size:14px;font-weight:700}.skip-link:focus{left:0}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}.topbar{height:94px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center}.brand img{width:163px;height:82px;object-fit:contain;object-position:left center}.nav{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:600;color:#47574d}.nav a:hover{color:var(--leaf)}.nav .nav-cta{background:var(--forest);color:#fff;padding:12px 18px;border-radius:999px}.button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:49px;padding:0 20px;border-radius:9px;font-size:13px;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px)}.button-primary{background:var(--lime);color:var(--forest)}.button-outline{border:1px solid rgba(255,255,255,.52);color:white}.button-dark{background:var(--forest);color:white}.hero{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center;min-height:530px;padding:43px 0 52px}.eyebrow{font-size:11px;letter-spacing:1.9px;text-transform:uppercase;font-weight:700;color:var(--leaf);display:flex;align-items:center;gap:9px}.eyebrow:before{content:'';width:25px;height:2px;background:currentColor}.hero h1{font:800 clamp(44px,5.2vw,66px)/1.05 Manrope,sans-serif;letter-spacing:-3.1px;color:var(--forest);margin:18px 0 18px}.hero h1 em{font-style:normal;color:var(--leaf)}.hero-copy{font-size:17px;color:#586960;max-width:500px;line-height:1.7}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}.hero-note{font-size:11px;color:#76837b;margin-top:16px}.hero-photo{position:relative;margin:0;min-height:424px;height:100%;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#c9d4ba}.hero-photo img{width:100%;height:100%;min-height:424px;object-fit:cover;object-position:59% center;display:block}.photo-label{position:absolute;left:17px;bottom:17px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:9px 12px;border-radius:8px;font-size:10px;color:#41564a}.hero-photo:after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(17,43,30,.18));pointer-events:none}.photo-label{z-index:1}.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#596960;font-size:12px}.proof b{color:var(--forest);font:700 14px Manrope}.proof-locations{display:flex;gap:25px;font-weight:600}.section{padding:91px 0}.section-head{max-width:680px;margin-bottom:37px}.kicker{color:var(--leaf);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.8px}.section h2{font:800 clamp(32px,4vw,46px)/1.12 Manrope,sans-serif;letter-spacing:-1.7px;margin:12px 0;color:var(--forest)}.section-head>p{color:var(--muted);font-size:15px;max-width:590px}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{background:white;padding:25px 23px 23px;border:1px solid var(--line);border-radius:15px;min-height:220px;transition:transform .2s,box-shadow .2s}.service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.service-image{display:block;width:100%;aspect-ratio:1.6/1;object-fit:cover;border-radius:12px;margin:0 0 18px;background:#eaf0e3}.service:nth-child(1) .service-image{object-position:52% center}.service:nth-child(2) .service-image{object-position:43% center}.service:nth-child(3) .service-image{object-position:53% center}.service h3{font:700 16px Manrope;margin:0 0 8px;color:var(--forest)}.service p{font-size:12px;color:var(--muted);margin:0;line-height:1.7}.service .more{display:block;margin-top:15px;font-size:11px;font-weight:700;color:var(--leaf)}.plan-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin-top:22px}.plan{background:#edf1e6;border:1px solid #e3e8de;border-radius:13px;padding:17px 15px;min-height:194px}.plan h3{font:700 13px Manrope;color:var(--forest);margin:0 0 8px}.plan-price{font:800 20px Manrope;color:var(--forest);display:block;margin-bottom:9px}.plan p{font-size:10px;line-height:1.55;color:#5f7065;margin:0}.plan-featured{background:#fff;border-color:#c8d7bb;box-shadow:0 8px 23px rgba(23,62,47,.08)}.plan-note{font-size:10px;color:#77847c;margin-top:10px}.method{background:#eaf0e3;padding:74px 0}.method-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:58px;align-items:center}.method h2{font:800 clamp(31px,4vw,43px)/1.13 Manrope;letter-spacing:-1.6px;color:var(--forest);margin:12px 0}.method-intro p{font-size:14px;color:var(--muted);max-width:420px}.steps{display:grid;grid-template-columns:1fr 1fr;gap:12px}.step{background:white;border:1px solid #e0e7d9;border-radius:13px;padding:18px;min-height:131px}.step-n{font:800 11px Manrope;color:#829549;letter-spacing:.5px}.step h3{font:700 14px Manrope;color:var(--forest);margin:8px 0 5px}.step p{font-size:11px;color:var(--muted);margin:0;line-height:1.55}.founder{display:grid;grid-template-columns:.78fr 1.22fr;gap:58px;align-items:center}.founder-photo{margin:0;border-radius:20px;overflow:hidden;background:#e6edf0;box-shadow:var(--shadow)}.founder-photo img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}.founder-copy h2{font:800 clamp(31px,4vw,43px)/1.13 Manrope;letter-spacing:-1.6px;color:var(--forest);margin:12px 0}.founder-copy p{font-size:14px;color:var(--muted)}.founder-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:19px}.founder-tags span{font-size:10px;font-weight:600;color:#45634e;background:#edf2e5;padding:7px 10px;border-radius:999px}.region{display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:64px}.region-image{position:relative;border-radius:19px;overflow:hidden;height:335px;background:#d9e2cc}.region-image img{width:100%;height:100%;object-fit:cover;object-position:center 68%;display:block}.region-copy h2{font:800 clamp(32px,4vw,44px)/1.12 Manrope;letter-spacing:-1.7px;color:var(--forest);margin:12px 0}.region-copy p{font-size:14px;color:var(--muted)}.region-list{list-style:none;padding:0;margin:21px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:9px;font-size:12px;color:#40564a}.region-list li:before{content:'↗';font-weight:700;color:var(--leaf);margin-right:8px}.disclaimer{margin-top:21px;font-size:10px!important;line-height:1.55;color:#7b867e!important}.cta{background:var(--forest);border-radius:20px;color:white;padding:45px 5.5%;display:flex;align-items:center;justify-content:space-between;gap:28px;position:relative;overflow:hidden}.cta:after{content:'';position:absolute;width:280px;height:280px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:14%;top:-175px;box-shadow:0 0 0 34px rgba(255,255,255,.035)}.cta h2{font:800 clamp(29px,3.7vw,40px)/1.12 Manrope;letter-spacing:-1.4px;margin:9px 0;color:#fff}.cta p{font-size:13px;color:#d3dfd5;margin:0;max-width:540px}.cta .button{position:relative;z-index:2;white-space:nowrap}.contact{padding:70px 0 78px}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:35px;border-bottom:1px solid var(--line);padding-bottom:37px}.contact h2{font:800 29px Manrope;color:var(--forest);letter-spacing:-1px;margin:9px 0}.contact p{font-size:13px;color:var(--muted);margin:0;max-width:640px}.contact small{display:block;font-size:10px;color:#7a867d;margin-top:13px}footer{padding:20px 0 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;color:#7a867d;font-size:10px}.footer-logo{width:100px;max-height:50px;object-fit:contain;object-position:left center}.footer-copy{text-align:right;max-width:560px}.mobile-cta{display:none}
@@ -320,14 +304,8 @@
     .button-whatsapp:hover{background:#1ebe5a}
     @media(max-width:600px){.contact-actions{display:block}.contact-actions .button{margin-top:12px}}
   </style>
-</head>
-<body>
-  <a class="skip-link" href="#inicio">Saltar al contenido principal</a>
-  <header class="wrap topbar">
-    <a class="brand" href="#inicio" aria-label="TecRural, inicio"><img src="assets/tecrural-logo.webp" alt="TecRural — Innovación con raíces"></a>
-    <nav class="nav" aria-label="Navegación principal"><a href="#soluciones">Soluciones</a><a href="#investigacion">I+D</a><a href="#planes">Planes</a><a href="#equipo">Quién soy</a><a href="#territorio">Territorio</a><a href="#faq">FAQ</a><a class="nav-cta" href="https://meteo.tecrural.es/">Ver meteorología ↗</a></nav>
-  </header>
-  <main id="inicio">
+{% endblock %}
+{% block content %}
   <div class="wrap">
     <section class="hero" aria-labelledby="hero-title">
       <div><div class="eyebrow">Tecnología útil para el campo</div><h1 id="hero-title">Meteorología agroclimática e IA para <em>decidir mejor.</em></h1><p class="hero-copy">Una plataforma AgTech para pequeñas y medianas explotaciones agrícolas: alertas, información local, orientación con IA y sensores conectados, desde el Altiplano hasta la Costa Tropical de Granada.</p><div class="actions"><a class="button button-dark" href="https://alarmas.tecrural.es/">Prueba la app gratuita <span aria-hidden="true">↗</span></a><a class="button" style="border:1px solid #cdd7ca;color:var(--forest)" href="#soluciones">Conoce las soluciones <span aria-hidden="true">↓</span></a></div><div class="hero-note">Empieza con información digital. Añade sensores si tu explotación los necesita.</div></div>
@@ -367,13 +345,15 @@
       <details><summary>¿Cuánto cuesta y qué planes hay?</summary><p>Existe un plan gratuito (TecRural Campo) y planes de pago desde 9,90 €/mes. Son precios de planificación pendientes de validación comercial; el alcance y el hardware se confirman según cada explotación.</p></details>
       <details><summary>¿El diagnóstico por fotografía sustituye al asesoramiento agronómico?</summary><p>No. Es una orientación preliminar. La decisión final conviene apoyarla en un técnico agrícola y, cuando proceda, en un análisis de laboratorio.</p></details>
     </div></section>
+{% set latestPosts = collections.recursos | reverse | take(3) %}
+    {% if latestPosts.length %}
+    <section class="section" id="articulos" aria-labelledby="articulos-title"><div class="section-head"><div class="kicker">Recursos</div><h2 id="articulos-title">Guías y bitácora de campo.</h2><p>Lo que medimos, lo que observamos en la zona y cómo interpretar los avisos oficiales en tu cultivo.</p></div><div class="research-grid">
+{% for post in latestPosts %}
+      <a class="research-card" href="{{ post.url }}?utm_source=web&utm_medium=home&utm_campaign=recursos&utm_content={{ post.fileSlug }}"><span class="kicker">{{ post.data.categoryLabel }} · {{ post.data.date | fmtDateShort }}</span><img class="research-thumb" width="1280" height="853" src="{{ post.data.hero }}" alt="{{ post.data.heroAlt }}" loading="lazy"><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p><span class="more">Leer el artículo ↗</span></a>
+{% endfor %}
+    </div><p style="margin:16px 0 0"><a class="button" style="border:1px solid #cdd7ca;color:var(--forest)" href="/recursos/">Ver todos los recursos ↗</a></p></section>
+    {% endif %}
     <section class="cta"><div><div class="eyebrow">Empieza por tu zona</div><h2>Consulta la meteorología agrícola local.</h2><p>Prueba la herramienta agroclimática de TecRural y encuentra información útil para tu entorno.</p></div><a class="button button-primary" href="https://meteo.tecrural.es/">Abrir meteorología ↗</a></section>
     <section class="contact" id="contacto"><div class="contact-inner"><div><div class="kicker">¿Tienes una necesidad concreta?</div><h2>Hablemos de tu cultivo o explotación.</h2><p>Cuéntanos qué necesitas observar, anticipar o resolver. La app de meteorología es también la puerta de entrada para conocer las herramientas de TecRural.</p><ul class="contact-list"><li><a href="mailto:mcgtecrural@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>mcgtecrural@gmail.com</a></li><li><a href="tel:+34614242716"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>+34 614 242 716</a></li><li><a href="https://wa.me/34614242716?text=Hola%20TecRural%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 8.5 8.5 0 0 1-4-1L3 20l1.3-4.2a8.5 8.5 0 1 1 16.7-4.3Z"/></svg>WhatsApp: +34 614 242 716</a></li></ul><small>Los precios publicados son orientativos. Para diagnóstico vegetal, el resultado es preliminar y puede requerir revisión técnica especializada.</small></div><div class="contact-actions"><a class="button button-whatsapp" href="https://wa.me/34614242716?text=Hola%20TecRural%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">Escríbenos por WhatsApp <span aria-hidden="true">↗</span></a><a class="button button-dark" href="https://meteo.tecrural.es/">Visitar TecRural ↗</a></div></div></section>
   </div>
-  </main>
-  <footer class="wrap" aria-label="Pie de página"><img class="footer-logo" src="assets/tecrural-logo.webp" alt="TecRural" width="1000" height="494" loading="lazy"><div class="footer-copy">Innovación con raíces · Granada, España<br><a href="mailto:mcgtecrural@gmail.com">mcgtecrural@gmail.com</a> · <a href="tel:+34614242716">+34 614 242 716</a><br>Las herramientas de TecRural apoyan la toma de decisiones; no sustituyen el asesoramiento agronómico específico.</div><div>© <span id="year"></span> TecRural</div></footer>
-  <div class="mobile-cta"><a class="button button-primary" href="https://meteo.tecrural.es/">Consultar meteorología local ↗</a></div>
-  <script defer src="assets/analytics.js"></script>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+{% endblock %}

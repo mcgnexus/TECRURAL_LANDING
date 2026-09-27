@@ -1,0 +1,43 @@
+/* Sección Recursos: guías y bitácora. Se carga junto a research.css. */
+
+.skip-link{position:absolute;left:-9999px;top:0;z-index:50;background:var(--forest);color:#fff;padding:12px 18px;border-radius:0 0 9px 0;font-size:14px;font-weight:700}
+.skip-link:focus{left:0}
+
+.recursos-main{padding:20px 0 72px}
+
+.page-title,.post-header h1{font:800 clamp(30px,4.6vw,48px)/1.12 Manrope,sans-serif;letter-spacing:-1.8px;color:var(--forest);margin:10px 0 12px;overflow-wrap:anywhere}
+.post-header .lead{color:#55675c;font-size:17px;line-height:1.65;max-width:720px;margin:0}
+.post-meta{font-size:12px;color:var(--muted);font-weight:600;margin-top:10px}
+.post-meta time{color:var(--forest)}
+.post-header{margin-bottom:22px}
+
+.prose{max-width:820px}
+.prose p{margin:0 0 16px;color:#3d4e44;font-size:16px;line-height:1.75}
+.prose h2{font:800 clamp(22px,3vw,30px)/1.2 Manrope,sans-serif;letter-spacing:-.6px;color:var(--forest);margin:34px 0 12px}
+.prose h3{font:700 18px/1.35 Manrope,sans-serif;color:var(--forest);margin:24px 0 8px}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:22px;color:#3d4e44}
+.prose li{margin:7px 0;line-height:1.6}
+.prose a{color:var(--leaf);text-decoration:underline;text-underline-offset:3px}
+.prose strong{color:var(--forest)}
+.prose blockquote{margin:20px 0;padding:14px 18px;border-left:3px solid #d5ac5a;background:#f4f6ee;border-radius:0 12px 12px 0;color:#4c5d52}
+.prose blockquote p:last-child{margin-bottom:0}
+.prose img{border-radius:12px}
+.prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+
+.cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.button-whatsapp{background:#25d366;color:#fff}
+.button-whatsapp:hover{background:#1ebe5a}
+
+footer.wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;color:#586960;font-size:12px;border-top:1px solid var(--line);margin-top:44px;padding:22px 0 calc(90px + env(safe-area-inset-bottom))}
+.footer-logo{width:100px;max-height:50px;object-fit:contain;object-position:left center}
+.footer-copy{max-width:420px;line-height:1.55}
+.footer-copy a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+
+.empty-note{color:var(--muted);font-size:15px;max-width:640px}
+.empty-note a{color:var(--leaf)}
+
+@media(max-width:600px){
+  .recursos-main{padding:12px 0 54px}
+  .prose p,.prose li{font-size:15px}
+  footer.wrap{flex-direction:column;align-items:flex-start;gap:10px;padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+}

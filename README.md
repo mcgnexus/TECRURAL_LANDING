@@ -1,6 +1,6 @@
 # TecRural — landing page
 
-Landing estática, responsive y sin dependencias de build. Está preparada para publicarse desde la raíz del repositorio con GitHub Pages o cualquier hosting estático.
+Web estática generada con [Eleventy](https://www.11ty.dev/) y desplegada en Vercel. La portada, las líneas de investigación y la sección de recursos se sirven desde `https://www.tecrural.es/`.
 
 ## Identidad y contenido
 
@@ -21,12 +21,33 @@ Landing estática, responsive y sin dependencias de build. Está preparada para 
 
 ## Desarrollo
 
-Abrir `index.html` directamente en un navegador. No requiere instalación ni compilación.
+```bash
+npm install     # instala @11ty/eleventy y el plugin RSS
+npm run dev     # servidor local con recarga en http://localhost:8080
+npm run build   # genera el sitio en _site/
+```
+
+## Estructura
+
+- `src/index.njk` — portada (el CSS de la portada sigue embebido en su `<head>`).
+- `src/recursos/` — guías (`guias/*.md`) y bitácora de campo (`bitacora/*.md`). Cada artículo es un `.md` con front matter (`title`, `description`, `date`, `updated`, `category`, `categoryLabel`, `zone`, `hero`, `heroAlt`, `permalink`, `tags: ["recursos"]`, `related[]`, `draft`).
+- `src/recursos/recursos.11tydata.js` — layout de artículos y regla de borradores (`draft: true` no se publica en builds y no entra en listados, sitemap ni feed).
+- `src/_includes/` — layouts (`base.njk`, `post.njk`) y partials (`header`, `footer`, `mobile-cta`).
+- `src/sitemap.njk` y `src/feed.njk` — `sitemap.xml` y `feed.xml` se generan solos al añadir artículos.
+- `assets/` e `investigacion/` se copian tal cual al resultado (*passthrough*).
+
+## Recursos (guías y bitácora)
+
+Dos líneas editoriales: **guías de cultivo** orientadas a búsqueda local (mango, aguacate, chirimoya, olivo, almendro) y **bitácora de campo** con datos medidos en nuestras estaciones. Reglas:
+
+- Orientación, nunca dictamen: sin dosis ni tratamientos; las fuentes oficiales (RAIF, SIAR, AEMET, MAPAMA) se citan y prevalecen.
+- Cada artículo lleva `Article` + `BreadcrumbList` JSON-LD, imagen OG en `assets/og/` (1200×630 JPEG) y UTMs propias para atribuir leads.
+- Los borradores se marcan `draft: true`; se pueden previsualizar con `npm run dev` pero no se publican.
 
 ## SEO
 
-- `robots.txt` y `sitemap.xml` están preparados para el dominio `https://www.tecrural.es/`. El sitemap lista la portada y las nueve líneas de investigación.
-- Portada: `canonical`, Open Graph completo (locale, url, site_name, image con dimensiones y alt) y datos estructurados JSON-LD (`WebSite` + `ProfessionalService`).
+- `robots.txt` y `sitemap.xml` apuntan al dominio `https://www.tecrural.es/`. El sitemap se **genera con Eleventy** y lista la portada, las nueve líneas de investigación y cada artículo publicado. También hay feed RSS en `/feed.xml`.
+- Portada y artículos: `canonical`, Open Graph completo (locale, url, site_name, image con dimensiones y alt) y datos estructurados JSON-LD (`WebSite` + `ProfessionalService` en portada; `Article` + `BreadcrumbList` en cada artículo).
 - Cada línea de investigación: `canonical`, Open Graph con imagen propia y `alt`, y JSON-LD con `BreadcrumbList` y `ResearchPage`.
 - Rendimiento: el hero (LCP) se precarga con `fetchpriority="high"`; las imágenes llevan `width`/`height` para evitar saltos de layout. Un solo `h1` por página.
 - Antes de publicar en producción, confirma que `www.tecrural.es` redirige al deploy y que las URLs `og:image` son accesibles públicamente. Tras desplegar, envía `sitemap.xml` en Google Search Console y verifica los datos estructurados con la prueba de resultados enriquecidos.

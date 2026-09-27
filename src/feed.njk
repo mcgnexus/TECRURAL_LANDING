@@ -1,0 +1,25 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }} · Recursos</title>
+    <link>{{ site.url }}/recursos/</link>
+    <description>Guías de cultivo y bitácora de campo del Altiplano y la Costa Tropical de Granada.</description>
+    <language>es</language>
+    {%- set newest = (collections.recursos | getNewestCollectionItemDate) if collections.recursos.length else null %}
+    <lastBuildDate>{{ (newest or buildDate) | dateToRfc3339 }}</lastBuildDate>
+    <atom:link href="{{ site.url }}{{ site.feed }}" rel="self" type="application/rss+xml"></atom:link>
+    {%- for post in collections.recursos | reverse %}
+    <item>
+      <title>{{ post.data.title | escape }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <guid>{{ site.url }}{{ post.url }}</guid>
+      <pubDate>{{ post.data.date | dateToRfc3339 }}</pubDate>
+      <description>{{ post.data.description | escape }}</description>
+    </item>
+    {%- endfor %}
+  </channel>
+</rss>

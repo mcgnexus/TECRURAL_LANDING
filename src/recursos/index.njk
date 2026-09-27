@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: Recursos · Guías de cultivo y bitácora de campo | TecRural
+description: Interpretación local de los avisos oficiales (RAIF, SIAR, AEMET) para el Altiplano y la Costa Tropical de Granada, guías de cultivo y lo que medimos en nuestras estaciones.
+canonicalPath: /recursos/
+ogTitle: Recursos TecRural · Guías y bitácora de campo
+ogDescription: Guías de cultivo para el Altiplano y la Costa Tropical de Granada y bitácora de campo con lo que medimos en nuestras estaciones.
+ogImage: /assets/og/app-agroclimatica.jpg
+ogImageAlt: Agricultor consulta información meteorológica en el móvil dentro de un olivar granadino
+---
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/research.css">
+  <link rel="stylesheet" href="/assets/recursos.css">
+{% endblock %}
+{% block content %}
+<div class="wrap recursos-main">
+  <div class="breadcrumb"><a href="/">Inicio</a> / Recursos</div>
+  <header class="post-header">
+    <div class="eyebrow">Recursos TecRural</div>
+    <h1 class="page-title">Guías y bitácora de campo.</h1>
+    <p class="lead">Interpretación local de lo que publican las fuentes oficiales y lo que medimos en nuestras estaciones: para decidir mejor, sin recetas milagro. Orientación, nunca dictamen.</p>
+  </header>
+  {% set posts = collections.recursos | reverse %}
+  {% if posts.length %}
+  <div class="research-grid">
+    {% for post in posts %}
+    <a class="research-card" href="{{ post.url }}"><span class="kicker">{{ post.data.categoryLabel }} · {{ post.data.date | fmtDateShort }}</span><img class="research-thumb" width="1280" height="853" src="{{ post.data.hero }}" alt="{{ post.data.heroAlt }}" loading="lazy"><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p><span class="more">Leer el artículo ↗</span></a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="empty-note">Estamos preparando los primeros artículos. Mientras tanto, puedes explorar las <a href="/#investigacion">líneas de investigación</a> o probar la <a href="{{ site.appUrl }}">app agroclimática</a>.</p>
+  {% endif %}
+</div>
+{% endblock %}

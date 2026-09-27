@@ -1,0 +1,21 @@
+{
+  "name": "tecrural-landing",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcgnexus/TECRURAL_LANDING.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mcgnexus/TECRURAL_LANDING/issues"
+  },
+  "homepage": "https://github.com/mcgnexus/TECRURAL_LANDING#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^3.0.0"
+  },
+  "private": true
+}

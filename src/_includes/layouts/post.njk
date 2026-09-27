@@ -1,0 +1,62 @@
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/research.css">
+  <link rel="stylesheet" href="/assets/recursos.css">
+{% endblock %}
+{% block headExtra %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "{{ title | escape }}",
+        "description": "{{ description | escape }}",
+        "datePublished": "{{ date | isoDate }}",
+        "dateModified": "{{ (updated or date) | isoDate }}",
+        "inLanguage": "es",
+        "author": { "@type": "Person", "name": "{{ author or site.author }}" },
+        "publisher": { "@type": "Organization", "name": "{{ site.name }}", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/assets/tecrural-logo.webp" } },
+        "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "TecRural", "item": "{{ site.url }}/" },
+          { "@type": "ListItem", "position": 2, "name": "Recursos", "item": "{{ site.url }}/recursos/" },
+          { "@type": "ListItem", "position": 3, "name": "{{ title | escape }}" }
+        ]
+      }
+    ]
+  }
+  </script>
+{% endblock %}
+{% block content %}
+<div class="wrap recursos-main">
+  <div class="breadcrumb"><a href="/">Inicio</a> / <a href="/recursos/">Recursos</a> / {{ title }}</div>
+  <article>
+    <header class="post-header">
+      <div class="eyebrow">{{ categoryLabel }}{% if zone %} · {{ zone }}{% endif %}</div>
+      <h1>{{ title }}</h1>
+      <p class="lead">{{ description }}</p>
+      <div class="post-meta"><time datetime="{{ date | isoDate }}">{{ date | fmtDate }}</time>{% if updated and (updated | isoDate) != (date | isoDate) %} · actualizado el <time datetime="{{ updated | isoDate }}">{{ updated | fmtDate }}</time>{% endif %} · {{ author or site.author }}</div>
+    </header>
+    {% if hero %}
+    <figure class="research-visual research-visual-image">
+      <img class="line-illustration" src="{{ hero }}" alt="{{ heroAlt }}" width="1280" height="853" decoding="async">
+      {% if heroCaption %}<figcaption>{{ heroCaption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+    <div class="prose">
+{{ content | safe }}
+    </div>
+    {% if related and related.length %}
+    <section class="related"><h2>Profundiza en esta línea</h2><div class="related-links">
+      {% for r in related %}<a href="{{ r.url }}?utm_source=web&utm_medium=blog&utm_campaign=recursos&utm_content={{ fileSlug }}">{{ r.title }} ↗</a>{% endfor %}
+    </div></section>
+    {% endif %}
+    <section class="research-cta"><div><div class="eyebrow" style="color:#d7e6a1">¿Lo aplicamos a tu parcela?</div><h2>Consulta la información local de TecRural.</h2><p>Prueba la app agroclimática o escríbenos por WhatsApp y lo vemos sobre tus datos.</p></div><div class="cta-buttons"><a class="button button-light" href="{{ site.appUrl }}?utm_source=web&utm_medium=blog&utm_campaign=recursos&utm_content={{ fileSlug }}">Abrir la app ↗</a><a class="button button-whatsapp" href="{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp ↗</a></div></section>
+    <p class="disclaimer">Este artículo ofrece orientación general basada en observación y en fuentes oficiales citadas; no sustituye la valoración de un técnico agrícola ni un análisis de laboratorio. En caso de riesgo económico o fitosanitario, consulta a un profesional.</p>
+  </article>
+</div>
+{% endblock %}
