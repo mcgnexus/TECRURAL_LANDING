@@ -38,9 +38,9 @@ El sitio está pensado para Vercel, que es además el único entorno donde se ac
 - Importa el repositorio en Vercel. Al ser estático, no requiere *build command* ni *output directory*.
 - `vercel.json` ya define:
   - `cleanUrls` y `trailingSlash: true` para servir rutas limpias como `/investigacion/<linea>/` (coincidentes con el `canonical` y el sitemap).
-  - Redirección permanente `tecrural.es` → `www.tecrural.es`.
   - Caché larga e inmutable para imágenes y caché moderada para JS/CSS, más cabeceras de seguridad básicas.
-- Añade `www.tecrural.es` (y `tecrural.es`) como dominio del proyecto. Mantén `meteo.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
+- Dominios: `www.tecrural.es` como dominio principal y `tecrural.es` con **redirección a nivel de dominio** (`308`) hacia `www.tecrural.es`, configurada en el panel de Vercel (Domains → Edit → Redirect). Mantén `meteo.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
+- DNS (gestionado en Cloudflare, proxy desactivado): `CNAME www → cname.vercel-dns.com` y `A @ → 76.76.21.21`. Tras apuntar el DNS, Vercel emite los certificados TLS automáticamente.
 - Activa **Web Analytics** en el panel del proyecto y vuelve a desplegar para empezar a contar visitas.
 
 ## Líneas de investigación
