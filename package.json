@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "nuevo": "node scripts/nuevo-post.js"
   },
   "repository": {
     "type": "git",

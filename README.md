@@ -36,6 +36,52 @@ npm run build   # genera el sitio en _site/
 - `src/sitemap.njk` y `src/feed.njk` — `sitemap.xml` y `feed.xml` se generan solos al añadir artículos.
 - `assets/` e `investigacion/` se copian tal cual al resultado (*passthrough*).
 
+## Cómo publicar un artículo
+
+No necesitas ayuda externa ni saber HTML. Tres caminos:
+
+**Opción A — en tu ordenador (recomendada):**
+
+```bash
+npm run nuevo -- "Título del artículo" guia        # o bitacora
+# edita el .md creado en src/recursos/guias/ (rellena los TODO)
+npm run dev                                        # previsualiza en http://localhost:8080
+# cuando esté listo: cambia draft: true por draft: false en el .md
+git add -A && git commit -m "Nuevo artículo" && git push   # se publica solo
+```
+
+**Opción B — desde github.com (sin terminal):**
+
+1. En el repositorio, botón **Add file → Create new file**, ruta:
+   `src/recursos/guias/mi-articulo.md`
+2. Pega la plantilla de front matter de abajo, escribe el contenido y haz *Commit*.
+3. Vercel despliega automáticamente al minuto.
+
+**Opción C — pedírmelo por el asistente**: también vale, pero no es necesario.
+
+Plantilla de front matter (la cabecera `--- ... ---` inicial del archivo):
+
+```yaml
+---
+title: "Título del artículo"
+description: "Resumen de 1-2 frases: es lo que se ve en Google y al compartir."
+date: 2026-09-27
+category: guias            # o bitacora
+categoryLabel: Guía        # Bitácora de campo
+zone: "Costa Tropical"
+crops: ["mango"]
+hero: /assets/research/app-agroclimatica.webp
+heroAlt: "Describe qué se ve en la imagen"
+ogImage: /assets/og/app-agroclimatica.jpg
+permalink: /recursos/guias/mi-articulo/
+draft: true                # cámbialo a false para publicar
+tags: ["recursos"]
+related:
+  - url: /investigacion/app-agroclimatica/
+    title: "App web: meteorología, alarmas y cálculo de riego"
+---
+```
+
 ## Recursos (guías y bitácora)
 
 Dos líneas editoriales: **guías de cultivo** orientadas a búsqueda local (mango, aguacate, chirimoya, olivo, almendro) y **bitácora de campo** con datos medidos en nuestras estaciones. Reglas:
