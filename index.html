@@ -59,6 +59,44 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es la meteorología agroclimática y cómo ayuda a una explotación?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Combina la previsión local con información útil para el campo: temperatura, lluvia, viento, riesgo de helada y necesidades de riego. En TecRural se traduce en alertas e informes en lenguaje claro que ayudan a planificar labores y riego en tu parcela." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona el diagnóstico vegetal con inteligencia artificial?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Envías una o varias fotografías de la planta y el sistema propone posibles causas y signos observados como orientación preliminar. No sustituye la valoración de un técnico agrícola ni un análisis de laboratorio." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito comprar sensores para empezar?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Puedes empezar gratis con la app de meteorología y alertas. Los sensores IoT de humedad del suelo o ambiente se añaden después, solo si aportan información útil a tu explotación." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿En qué zonas de Granada trabaja TecRural?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En el Altiplano de Granada (Huéscar, Baza y Puebla de Don Fadrique) y en la Costa Tropical (Almuñécar, Motril y entorno). Los cultivos de referencia son olivar, almendro y pistacho en el Altiplano, y mango, aguacate y chirimoya en la Costa." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta y qué planes hay?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Existe un plan gratuito (TecRural Campo) y planes de pago desde 9,90 €/mes. Son precios de planificación pendientes de validación comercial; el alcance y el hardware se confirman según cada explotación." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿El diagnóstico por fotografía sustituye al asesoramiento agronómico?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Es una orientación preliminar. La decisión final conviene apoyarla en un técnico agrícola y, cuando proceda, en un análisis de laboratorio." }
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -259,28 +297,38 @@
     .research-card .more{margin-top:auto}
     @media(max-width:850px){.research-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:600px){.research-grid{grid-template-columns:1fr;gap:10px}.research-card{min-height:0;padding:18px}}
+
+    .faq{max-width:900px;margin:0 auto}
+    .faq details{border:1px solid var(--line);border-radius:12px;background:#fff;margin-bottom:10px;padding:0 20px}
+    .faq summary{cursor:pointer;font:700 16px/1.4 Manrope,sans-serif;color:var(--forest);padding:17px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary:after{content:'+';font-size:22px;font-weight:700;color:var(--leaf);flex:none;transition:transform .2s}
+    .faq details[open] summary:after{transform:rotate(45deg)}
+    .faq details p{margin:0 0 18px;font-size:15px;color:#586960;line-height:1.7}
+    .faq details a{color:var(--leaf);font-weight:600}
+    @media(max-width:600px){.faq summary{font-size:15px;padding:15px 0}.faq details{padding:0 16px}.faq details p{font-size:14px}}
   </style>
 </head>
 <body>
   <a class="skip-link" href="#inicio">Saltar al contenido principal</a>
   <header class="wrap topbar">
     <a class="brand" href="#inicio" aria-label="TecRural, inicio"><img src="assets/tecrural-logo.webp" alt="TecRural — Innovación con raíces"></a>
-    <nav class="nav" aria-label="Navegación principal"><a href="#soluciones">Soluciones</a><a href="#investigacion">I+D</a><a href="#planes">Planes</a><a href="#equipo">Quién soy</a><a href="#territorio">Territorio</a><a class="nav-cta" href="https://meteo.tecrural.es/">Ver meteorología ↗</a></nav>
+    <nav class="nav" aria-label="Navegación principal"><a href="#soluciones">Soluciones</a><a href="#investigacion">I+D</a><a href="#planes">Planes</a><a href="#equipo">Quién soy</a><a href="#territorio">Territorio</a><a href="#faq">FAQ</a><a class="nav-cta" href="https://meteo.tecrural.es/">Ver meteorología ↗</a></nav>
   </header>
   <main id="inicio">
   <div class="wrap">
     <section class="hero" aria-labelledby="hero-title">
-      <div><div class="eyebrow">Tecnología útil para el campo</div><h1 id="hero-title">Más información para <em>decidir mejor.</em></h1><p class="hero-copy">Una plataforma AgTech para pequeñas y medianas explotaciones agrícolas: alertas, información local, orientación con IA y sensores conectados, desde el Altiplano hasta la Costa Tropical de Granada.</p><div class="actions"><a class="button button-dark" href="https://alarmas.tecrural.es/">Prueba la app gratuita <span aria-hidden="true">↗</span></a><a class="button" style="border:1px solid #cdd7ca;color:var(--forest)" href="#soluciones">Conoce las soluciones <span aria-hidden="true">↓</span></a></div><div class="hero-note">Empieza con información digital. Añade sensores si tu explotación los necesita.</div></div>
+      <div><div class="eyebrow">Tecnología útil para el campo</div><h1 id="hero-title">Meteorología agroclimática e IA para <em>decidir mejor.</em></h1><p class="hero-copy">Una plataforma AgTech para pequeñas y medianas explotaciones agrícolas: alertas, información local, orientación con IA y sensores conectados, desde el Altiplano hasta la Costa Tropical de Granada.</p><div class="actions"><a class="button button-dark" href="https://alarmas.tecrural.es/">Prueba la app gratuita <span aria-hidden="true">↗</span></a><a class="button" style="border:1px solid #cdd7ca;color:var(--forest)" href="#soluciones">Conoce las soluciones <span aria-hidden="true">↓</span></a></div><div class="hero-note">Empieza con información digital. Añade sensores si tu explotación los necesita.</div></div>
       <figure class="hero-photo"><img src="assets/olivar-sensores.webp" alt="Imagen ilustrativa de un olivar del Altiplano de Granada con una estación agroclimática y un sensor de suelo" width="1100" height="733" fetchpriority="high" decoding="async"><figcaption class="photo-label">Imagen ilustrativa · tecnología para el olivar</figcaption></figure>
     </section>
     <div class="proof"><b>Tecnología rural, hecha desde Granada.</b><div class="proof-locations"><span>Altiplano · Huéscar · Baza</span><span>Costa Tropical · Almuñécar · Motril</span></div></div>
-    <section class="section" id="soluciones"><div class="section-head"><div class="kicker">Qué hacemos</div><h2>Herramientas prácticas para retos reales.</h2><p>TecRural acerca tecnología útil, comprensible y asequible a agricultores, cooperativas y entidades rurales.</p></div><div class="services">
+    <section class="section" id="soluciones"><div class="section-head"><div class="kicker">Qué hacemos</div><h2>Meteorología, IA y sensores para retos reales.</h2><p>TecRural acerca tecnología útil, comprensible y asequible a agricultores, cooperativas y entidades rurales.</p></div><div class="services">
       <article class="service"><img class="service-image" src="assets/solutions/orientacion-vegetal.webp" alt="Agricultor toma una fotografía de una hoja de mango para revisarla con el móvil" width="640" height="400" loading="lazy" decoding="async"><h3>Orientación vegetal con IA</h3><p>Envía fotografías de tus plantas y recibe posibles causas, signos observados y primeros pasos prudentes para valorar el problema.</p><a class="more" href="https://meteo.tecrural.es/">Conocer TecRural ↗</a></article>
       <article class="service"><img class="service-image" src="assets/solutions/informacion-agroclimatica.webp" alt="Estación agroclimática instalada entre olivos en el Altiplano de Granada" width="640" height="400" loading="lazy" decoding="async"><h3>Información agroclimática</h3><p>Previsión local, alertas de helada, lluvia y viento, e informes en lenguaje claro para planificar labores y riego.</p><a class="more" href="https://meteo.tecrural.es/">Consultar meteorología ↗</a></article>
       <article class="service"><img class="service-image" src="assets/solutions/sensor-humedad-suelo.webp" alt="Sensor conectado de humedad insertado en el suelo de un cultivo de mango" width="640" height="400" loading="lazy" decoding="async"><h3>Sensores IoT agrícolas</h3><p>Prototipos de bajo coste para observar humedad del suelo y condiciones ambientales, con datos y alertas vinculados al servicio.</p><a class="more" href="#contacto">Consultar un piloto ↓</a></article>
     </div>
     </section>
-    <section class="section" id="investigacion" aria-labelledby="research-title"><div class="section-head"><div class="kicker">Investigación y desarrollo</div><h2 id="research-title">Nueve líneas para medir, anticipar y decidir mejor.</h2><p>Explora cada línea de trabajo: qué problema aborda, cómo podría ayudar a una explotación y qué aspectos deben validarse antes de ofrecerla como servicio. Las imágenes muestran escenarios ilustrativos, no productos instalados.</p></div><div class="research-grid">
+    <section class="section" id="investigacion" aria-labelledby="research-title"><div class="section-head"><div class="kicker">Investigación y desarrollo</div><h2 id="research-title">Nueve líneas de investigación para medir, anticipar y decidir mejor.</h2><p>Explora cada línea de trabajo: qué problema aborda, cómo podría ayudar a una explotación y qué aspectos deben validarse antes de ofrecerla como servicio. Las imágenes muestran escenarios ilustrativos, no productos instalados.</p></div><div class="research-grid">
       <a class="research-card" href="investigacion/app-agroclimatica/"><span class="kicker">01 · Plataforma digital</span><img width="1280" height="853" class="research-thumb" src="assets/research/app-agroclimatica.webp" alt="" loading="lazy"><h3>App agroclimática, alertas y riego</h3><p>Previsión local, riesgos meteorológicos e información para apoyar la planificación agrícola.</p><span class="more">Explorar la línea ↗</span></a>
       <a class="research-card" href="investigacion/estaciones-solares/"><span class="kicker">02 · IoT y energía</span><img width="1280" height="853" class="research-thumb" src="assets/research/estaciones-solares.webp" alt="" loading="lazy"><h3>Estaciones meteorológicas solares</h3><p>Medición en finca y conexión de los datos con una plataforma de consulta y alertas.</p><span class="more">Explorar la línea ↗</span></a>
       <a class="research-card" href="investigacion/fitomonitorizacion/"><span class="kicker">03 · Sensores de cultivo</span><img width="1280" height="853" class="research-thumb" src="assets/research/fitomonitorizacion.webp" alt="" loading="lazy"><h3>Fitomonitorización</h3><p>Humedad del suelo, temperatura foliar y cambios de grosor en tallos o frutos.</p><span class="more">Explorar la línea ↗</span></a>
@@ -298,8 +346,16 @@
   <section class="method" id="como-trabajamos"><div class="wrap method-inner"><div class="method-intro"><div class="kicker">De la necesidad a la herramienta</div><h2>Primero entendemos tu campo.</h2><p>Escuchamos qué necesitas observar o decidir. Después buscamos una solución sencilla que aporte información útil.</p></div><div class="steps"><article class="step"><div class="step-n">01 / ESCUCHAR</div><h3>Conocer la explotación</h3><p>Cultivo, zona, problema y decisión que quieres tomar.</p></article><article class="step"><div class="step-n">02 / MEDIR</div><h3>Reunir información</h3><p>Datos meteorológicos, observaciones y sensores cuando ayuden.</p></article><article class="step"><div class="step-n">03 / EXPLICAR</div><h3>Dar claridad</h3><p>Convertimos datos técnicos en información fácil de consultar.</p></article><article class="step"><div class="step-n">04 / VALIDAR</div><h3>Mejorar en el terreno</h3><p>Probamos las herramientas con las personas que las utilizan.</p></article></div></div></section>
   <div class="wrap">
     <section class="section founder" id="equipo"><figure class="founder-photo"><img src="assets/manuel-carrasco-tecrural.webp" alt="Manuel Carrasco, promotor de TecRural" width="1000" height="1000" loading="lazy" decoding="async"></figure><div class="founder-copy"><div class="kicker">Tecnología explicada con claridad</div><h2>Conocimiento científico al servicio del medio rural.</h2><p>Soy Manuel Carrasco, promotor de TecRural. Soy Licenciado en Química y Técnico Superior en Análisis Químico, con experiencia en docencia científica y trabajo práctico en electrónica, programación, inteligencia artificial y prototipado.</p><p>Esa combinación me permite desarrollar herramientas y explicar de forma sencilla cómo pueden ayudar en una explotación, sin perder de vista sus límites y necesidades reales.</p><div class="founder-tags"><span>Química y análisis</span><span>IA y software</span><span>Electrónica e IoT</span><span>Prototipado</span></div></div></section>
-    <section class="section region" id="territorio"><div class="region-image"><img src="assets/costa-tropical-granada.webp" alt="Agricultor observa mangos en una explotación subtropical de la Costa Tropical de Granada" width="1280" height="853" loading="lazy" decoding="async"></div><div class="region-copy"><div class="kicker">Cerca de tu explotación</div><h2>Del Altiplano a la Costa Tropical.</h2><p>TecRural trabaja para explotaciones agrícolas de dos territorios granadinos con necesidades distintas. La app y las líneas de investigación se adaptan al cultivo, el clima y las decisiones de cada finca.</p><ul class="region-list"><li>Huéscar y Baza</li><li>Puebla de Don Fadrique</li><li>Almuñécar y entorno</li><li>Motril y Costa Tropical</li></ul><div class="crop-regions"><p><strong>Altiplano:</strong> olivar, almendro y pistacho.</p><p><strong>Costa Tropical:</strong> mango, aguacate y chirimoya.</p></div><p class="disclaimer">Las imágenes de la web son ilustrativas. Las tecnologías y modelos agronómicos deben validarse por cultivo y zona. El análisis de imágenes es una orientación preliminar. No sustituye la valoración de un técnico agrícola ni un análisis de laboratorio. Los precios y planes indicados son hipótesis de planificación pendientes de validación comercial.</p></div></section>
-    <section class="cta"><div><div class="eyebrow">Empieza por tu zona</div><h2>Consulta la meteorología local.</h2><p>Prueba la herramienta agroclimática de TecRural y encuentra información útil para tu entorno.</p></div><a class="button button-primary" href="https://meteo.tecrural.es/">Abrir meteorología ↗</a></section>
+    <section class="section region" id="territorio"><div class="region-image"><img src="assets/costa-tropical-granada.webp" alt="Agricultor observa mangos en una explotación subtropical de la Costa Tropical de Granada" width="1280" height="853" loading="lazy" decoding="async"></div><div class="region-copy"><div class="kicker">Cerca de tu explotación</div><h2>Del Altiplano a la Costa Tropical de Granada.</h2><p>TecRural trabaja para explotaciones agrícolas de dos territorios granadinos con necesidades distintas. La app y las líneas de investigación se adaptan al cultivo, el clima y las decisiones de cada finca.</p><ul class="region-list"><li>Huéscar y Baza</li><li>Puebla de Don Fadrique</li><li>Almuñécar y entorno</li><li>Motril y Costa Tropical</li></ul><div class="crop-regions"><p><strong>Altiplano:</strong> olivar, almendro y pistacho.</p><p><strong>Costa Tropical:</strong> mango, aguacate y chirimoya.</p></div><p class="disclaimer">Las imágenes de la web son ilustrativas. Las tecnologías y modelos agronómicos deben validarse por cultivo y zona. El análisis de imágenes es una orientación preliminar. No sustituye la valoración de un técnico agrícola ni un análisis de laboratorio. Los precios y planes indicados son hipótesis de planificación pendientes de validación comercial.</p></div></section>
+    <section class="section" id="faq" aria-labelledby="faq-title"><div class="section-head"><div class="kicker">Preguntas frecuentes</div><h2 id="faq-title">Dudas habituales sobre TecRural.</h2></div><div class="faq">
+      <details><summary>¿Qué es la meteorología agroclimática y cómo ayuda a una explotación?</summary><p>Combina la previsión local con información útil para el campo: temperatura, lluvia, viento, riesgo de helada y necesidades de riego. En TecRural se traduce en alertas e informes en lenguaje claro que ayudan a planificar labores y riego en tu parcela.</p></details>
+      <details><summary>¿Cómo funciona el diagnóstico vegetal con inteligencia artificial?</summary><p>Envías una o varias fotografías de la planta y el sistema propone posibles causas y signos observados como orientación preliminar. No sustituye la valoración de un técnico agrícola ni un análisis de laboratorio.</p></details>
+      <details><summary>¿Necesito comprar sensores para empezar?</summary><p>No. Puedes empezar gratis con la app de meteorología y alertas. Los sensores IoT de humedad del suelo o ambiente se añaden después, solo si aportan información útil a tu explotación.</p></details>
+      <details><summary>¿En qué zonas de Granada trabaja TecRural?</summary><p>En el Altiplano de Granada (Huéscar, Baza y Puebla de Don Fadrique) y en la Costa Tropical (Almuñécar, Motril y entorno). Los cultivos de referencia son olivar, almendro y pistacho en el Altiplano, y mango, aguacate y chirimoya en la Costa.</p></details>
+      <details><summary>¿Cuánto cuesta y qué planes hay?</summary><p>Existe un plan gratuito (TecRural Campo) y planes de pago desde 9,90 €/mes. Son precios de planificación pendientes de validación comercial; el alcance y el hardware se confirman según cada explotación.</p></details>
+      <details><summary>¿El diagnóstico por fotografía sustituye al asesoramiento agronómico?</summary><p>No. Es una orientación preliminar. La decisión final conviene apoyarla en un técnico agrícola y, cuando proceda, en un análisis de laboratorio.</p></details>
+    </div></section>
+    <section class="cta"><div><div class="eyebrow">Empieza por tu zona</div><h2>Consulta la meteorología agrícola local.</h2><p>Prueba la herramienta agroclimática de TecRural y encuentra información útil para tu entorno.</p></div><a class="button button-primary" href="https://meteo.tecrural.es/">Abrir meteorología ↗</a></section>
     <section class="contact" id="contacto"><div class="contact-inner"><div><div class="kicker">¿Tienes una necesidad concreta?</div><h2>Hablemos de tu cultivo o explotación.</h2><p>Cuéntanos qué necesitas observar, anticipar o resolver. La app de meteorología es también la puerta de entrada para conocer las herramientas de TecRural.</p><small>Los precios publicados son orientativos. Para diagnóstico vegetal, el resultado es preliminar y puede requerir revisión técnica especializada.</small></div><a class="button button-dark" href="https://meteo.tecrural.es/">Visitar TecRural ↗</a></div></section>
   </div>
   </main>
