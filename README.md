@@ -17,12 +17,31 @@ Landing estática, responsive y sin dependencias de build. Está preparada para 
 
 - Añadir los perfiles oficiales de Instagram/Facebook y un número de WhatsApp Business si se desea ofrecer un canal directo desde esta página.
 - Actualizar el contenido de servicios y precios cuando cambie la oferta aprobada. Los precios de los planes actuales son hipótesis comerciales de planificación.
-- Añadir URL canónica y metadatos Open Graph cuando esté decidido el dominio.
+- URL canónica (`https://www.tecrural.es/`) y metadatos Open Graph ya incluidos en la portada y en cada línea de investigación. Verifica que el dominio `www.tecrural.es` redirija al sitio desplegado y que `og:image` apunte a recursos accesibles públicamente.
 
 ## Desarrollo
 
 Abrir `index.html` directamente en un navegador. No requiere instalación ni compilación.
 
+## SEO
+
+- `robots.txt` y `sitemap.xml` están preparados para el dominio `https://www.tecrural.es/`. El sitemap lista la portada y las nueve líneas de investigación.
+- Portada: `canonical`, Open Graph completo (locale, url, site_name, image con dimensiones y alt) y datos estructurados JSON-LD (`WebSite` + `ProfessionalService`).
+- Cada línea de investigación: `canonical`, Open Graph con imagen propia y `alt`, y JSON-LD con `BreadcrumbList` y `ResearchPage`.
+- Rendimiento: el hero (LCP) se precarga con `fetchpriority="high"`; las imágenes llevan `width`/`height` para evitar saltos de layout. Un solo `h1` por página.
+- Antes de publicar en producción, confirma que `www.tecrural.es` redirige al deploy y que las URLs `og:image` son accesibles públicamente. Tras desplegar, envía `sitemap.xml` en Google Search Console y verifica los datos estructurados con la prueba de resultados enriquecidos.
+
+## Despliegue en Vercel
+
+El sitio está pensado para Vercel, que es además el único entorno donde se activa la analítica (`assets/analytics.js`).
+
+- Importa el repositorio en Vercel. Al ser estático, no requiere *build command* ni *output directory*.
+- `vercel.json` ya define:
+  - `cleanUrls` y `trailingSlash: true` para servir rutas limpias como `/investigacion/<linea>/` (coincidentes con el `canonical` y el sitemap).
+  - Redirección permanente `tecrural.es` → `www.tecrural.es`.
+  - Caché larga e inmutable para imágenes y caché moderada para JS/CSS, más cabeceras de seguridad básicas.
+- Añade `www.tecrural.es` (y `tecrural.es`) como dominio del proyecto. Mantén `meteo.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
+- Activa **Web Analytics** en el panel del proyecto y vuelve a desplegar para empezar a contar visitas.
 
 ## Líneas de investigación
 
