@@ -1,5 +1,6 @@
 ---
 title: "Chirimoya en la Costa Tropical: marchitez y vigilancia de la humedad del suelo"
+layout: layouts/post.njk
 description: "Por qué la chirimoya de la Costa Tropical es tan sensible al encharcamiento y a la sequía, y cómo la vigilancia de la humedad del suelo ayuda a detectar el problema antes de que sea visible."
 date: 2026-10-15
 updated: 2026-10-15

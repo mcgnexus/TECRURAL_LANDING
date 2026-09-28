@@ -1,4 +1,17 @@
-<header class="wrap topbar">
+<header class="wrap topbar has-mobile-menu">
   <a class="brand" href="{{ anchorPrefix }}#inicio" aria-label="TecRural, inicio"><img src="/assets/tecrural-logo.webp" alt="TecRural — Innovación con raíces"></a>
   <nav class="nav" aria-label="Navegación principal"><a href="{{ anchorPrefix }}#soluciones">Soluciones</a><a href="{{ anchorPrefix }}#investigacion">I+D</a><a href="/recursos/">Recursos</a><a href="{{ anchorPrefix }}#planes">Planes</a><a href="{{ anchorPrefix }}#equipo">Quién soy</a><a href="{{ anchorPrefix }}#territorio">Territorio</a><a href="{{ anchorPrefix }}#faq">FAQ</a><a class="nav-cta" href="{{ site.appUrl }}">Ver meteorología ↗</a></nav>
+  <details class="mobile-menu">
+    <summary><span>Menú</span><span aria-hidden="true">☰</span></summary>
+    <nav aria-label="Navegación móvil">
+      <a href="{{ anchorPrefix }}#soluciones">Soluciones</a>
+      <a href="{{ anchorPrefix }}#investigacion">I+D</a>
+      <a href="/recursos/">Recursos</a>
+      <a href="{{ anchorPrefix }}#planes">Planes</a>
+      <a href="{{ anchorPrefix }}#equipo">Quién soy</a>
+      <a href="{{ anchorPrefix }}#territorio">Territorio</a>
+      <a href="{{ anchorPrefix }}#faq">FAQ</a>
+      <a class="mobile-menu-cta" href="{{ site.appUrl }}">Ver meteorología ↗</a>
+    </nav>
+  </details>
 </header>

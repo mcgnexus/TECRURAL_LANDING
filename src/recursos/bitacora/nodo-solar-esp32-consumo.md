@@ -1,5 +1,6 @@
 ---
 title: "Nodo solar ESP32: cómo diseñamos un sensor de campo que aguanta la temporada"
+layout: layouts/post.njk
 description: "Las decisiones de diseño de nuestros nodos de campo (ESP32-C3, alimentación solar, deep sleep y cajas IP) y por qué priorizamos lecturas fiables antes que precisión no calibrada."
 date: 2026-10-20
 updated: 2026-10-20

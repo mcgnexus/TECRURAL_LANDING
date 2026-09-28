@@ -25,8 +25,8 @@
 .prose hr{border:0;border-top:1px solid var(--line);margin:28px 0}
 
 .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
-.button-whatsapp{background:#25d366;color:#fff}
-.button-whatsapp:hover{background:#1ebe5a}
+.button-whatsapp{background:#25d366;color:#123b2a}
+.button-whatsapp:hover{background:#1ebe5a;color:#123b2a}
 
 footer.wrap{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;color:#586960;font-size:12px;border-top:1px solid var(--line);margin-top:44px;padding:22px 0 calc(90px + env(safe-area-inset-bottom))}
 .footer-logo{width:100px;max-height:50px;object-fit:contain;object-position:left center}

@@ -1,0 +1,43 @@
+---
+title: Privacidad | TecRural
+description: Información sobre el responsable, la analítica de visitas y las solicitudes a servicios externos en tecrural.es.
+canonicalPath: /privacidad/
+permalink: /privacidad/
+---
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/research.css">
+  <link rel="stylesheet" href="/assets/recursos.css">
+{% endblock %}
+{% block content %}
+<div class="wrap recursos-main">
+  <div class="breadcrumb"><a href="/">Inicio</a> / Privacidad</div>
+  <article>
+    <header class="post-header">
+      <div class="eyebrow">Información legal</div>
+      <h1 class="page-title">Política de privacidad</h1>
+      <p class="lead">Esta página describe qué ocurre cuando visitas tecrural.es y qué proveedores externos se solicitan desde la landing.</p>
+      <div class="post-meta">Última actualización: <time datetime="2026-09-28">28 de septiembre de 2026</time></div>
+    </header>
+    <div class="prose">
+      <h2>Responsable y ámbito</h2>
+      <p>El responsable es Manuel Carrasco García. Para consultas sobre privacidad o para ejercer derechos relacionados con datos personales, escribe a <a href="mailto:mcgtecrural@gmail.com">mcgtecrural@gmail.com</a>.</p>
+      <p>Esta política se refiere a la web estática <strong>www.tecrural.es</strong>. Los servicios de Meteo Huéscar y otros subdominios pueden tener tratamientos y políticas propios; puedes consultar la <a href="https://meteo.tecrural.es/privacidad">política de privacidad de Meteo Huéscar</a>.</p>
+
+      <h2>Visitas y analítica</h2>
+      <p>Vercel aloja el sitio y puede procesar datos técnicos de las solicitudes para servirlo y protegerlo. En los dominios de producción previstos, TecRural carga además el cliente de Vercel Web Analytics. El registro efectivo de visitas depende de que esa función esté habilitada en Vercel; cuando está activa, se usa para conocer las visitas por página, no para publicidad. El script no se carga en la vista local ni en GitHub Pages. Consulta la <a href="https://vercel.com/legal/privacy-policy">política de privacidad de Vercel</a> para más detalles sobre sus tratamientos.</p>
+
+      <h2>Fuentes tipográficas</h2>
+      <p>La web solicita las hojas de estilo de Google Fonts y los archivos de fuente alojados en Google Fonts. Al establecer esas conexiones, el proveedor puede recibir datos técnicos de la solicitud, como la dirección IP y la información del navegador. Consulta la <a href="https://policies.google.com/privacy">política de privacidad de Google</a>.</p>
+
+      <h2>Contacto y enlaces externos</h2>
+      <p>La landing no contiene formularios de contacto. Los enlaces de correo, teléfono y WhatsApp abren el canal elegido por la persona visitante. Si lo utilizas, el tratamiento posterior depende del proveedor de ese canal y de la información que decidas enviar.</p>
+
+      <h2>Derechos</h2>
+      <p>Puedes solicitar información sobre tus derechos de acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo al correo de contacto indicado. También puedes presentar una reclamación ante la Agencia Española de Protección de Datos.</p>
+
+      <p>Para información sobre tecnologías de almacenamiento y analítica, consulta la <a href="/cookies/">política de cookies y analítica</a>.</p>
+    </div>
+  </article>
+</div>
+{% endblock %}

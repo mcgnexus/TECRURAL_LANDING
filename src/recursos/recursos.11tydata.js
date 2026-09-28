@@ -1,5 +1,4 @@
 module.exports = {
-  layout: 'layouts/post.njk',
   mobileCtaClass: 'button-whatsapp',
   mobileCtaText: 'Escríbenos por WhatsApp ↗',
   mobileCtaExternal: true,

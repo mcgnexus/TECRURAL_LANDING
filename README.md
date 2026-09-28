@@ -8,7 +8,7 @@ Web estática generada con [Eleventy](https://www.11ty.dev/) y desplegada en Ver
 - `assets/olivar-sensores.webp` es una imagen ilustrativa generada para esta página; no representa una instalación real concreta.
 - `assets/manuel-carrasco-tecrural.webp` es el retrato aportado por el promotor y se utiliza en la sección de presentación.
 - `assets/research/*.webp` contiene nueve imágenes generadas para ilustrar las líneas de investigación. Son escenas conceptuales, no evidencia de productos o instalaciones ya validados.
-- Tipografía: Manrope para titulares y DM Sans para texto de interfaz, ambas servidas desde Google Fonts.
+- Tipografía: Manrope para titulares y DM Sans para texto de interfaz, ambas servidas desde Google Fonts con los pesos usados por el sitio.
 - La descripción de servicios, el alcance del diagnóstico y los precios orientativos se ajustaron según la [Wiki TecRural](https://github.com/mcgnexus/WIKI_TECRURAL).
 - Los planes Campo, Esencial, Monitor, Pro y Cooperativas, y sus importes, proceden del plan de empresa. Se identifican en la página como precios de planificación pendientes de validación comercial.
 - La aplicación enlazada es la URL de producción documentada: <https://meteo.tecrural.es/>.
@@ -29,10 +29,12 @@ npm run build   # genera el sitio en _site/
 
 ## Estructura
 
-- `src/index.njk` — portada (el CSS de la portada sigue embebido en su `<head>`).
+- `src/index.njk` — portada. Eleventy extrae el CSS del documento generado a `/assets/landing.css` para que Vercel lo pueda cachear.
 - `src/recursos/` — guías (`guias/*.md`) y bitácora de campo (`bitacora/*.md`). Cada artículo es un `.md` con front matter (`title`, `description`, `date`, `updated`, `category`, `categoryLabel`, `zone`, `hero`, `heroAlt`, `permalink`, `tags: ["recursos"]`, `related[]`, `draft`).
 - `src/recursos/recursos.11tydata.js` — layout de artículos y regla de borradores (`draft: true` no se publica en builds y no entra en listados, sitemap ni feed).
 - `src/_includes/` — layouts (`base.njk`, `post.njk`) y partials (`header`, `footer`, `mobile-cta`).
+- `assets/site.js` — comportamiento de navegación móvil y año del pie de página.
+- `src/privacidad.njk` y `src/cookies.njk` — información de privacidad, analítica y solicitudes a servicios externos.
 - `src/sitemap.njk` y `src/feed.njk` — `sitemap.xml` y `feed.xml` se generan solos al añadir artículos.
 - `assets/` e `investigacion/` se copian tal cual al resultado (*passthrough*).
 
@@ -105,7 +107,8 @@ El sitio está pensado para Vercel, que es además el único entorno donde se ac
 - Importa el repositorio en Vercel. Al ser estático, no requiere *build command* ni *output directory*.
 - `vercel.json` ya define:
   - `cleanUrls` y `trailingSlash: true` para servir rutas limpias como `/investigacion/<linea>/` (coincidentes con el `canonical` y el sitemap).
-  - Caché larga e inmutable para imágenes y caché moderada para JS/CSS, más cabeceras de seguridad básicas.
+  - Caché larga e inmutable para imágenes y caché moderada para JS/CSS, además de una CSP que restringe scripts a recursos propios y permite Google Fonts; las reglas de estilo inline se limitan a los atributos que aún se usan en el HTML.
+  - HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, COOP y `Permissions-Policy`.
 - Dominios: `www.tecrural.es` como dominio principal y `tecrural.es` con **redirección a nivel de dominio** (`308`) hacia `www.tecrural.es`, configurada en el panel de Vercel (Domains → Edit → Redirect). Mantén `meteo.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
 - DNS (gestionado en Cloudflare, proxy desactivado): `CNAME www → cname.vercel-dns.com` y `A @ → 76.76.21.21`. Tras apuntar el DNS, Vercel emite los certificados TLS automáticamente.
 - Activa **Web Analytics** en el panel del proyecto y vuelve a desplegar para empezar a contar visitas.

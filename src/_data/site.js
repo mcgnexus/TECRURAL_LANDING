@@ -10,15 +10,22 @@ module.exports = {
   appUrl: 'https://meteo.tecrural.es/',
   alarmasUrl: 'https://alarmas.tecrural.es/',
   feed: '/feed.xml',
+  // Actualizar estas fechas solo cuando cambie el contenido de la página correspondiente.
+  homeLastmod: '2026-09-28',
+  resourcesLastmod: '2026-09-28',
+  legalPages: [
+    { url: '/privacidad/', lastmod: '2026-09-28' },
+    { url: '/cookies/', lastmod: '2026-09-28' }
+  ],
   researchPages: [
-    { url: '/investigacion/app-agroclimatica/', title: 'App web: meteorología, alarmas y cálculo de riego' },
-    { url: '/investigacion/estaciones-solares/', title: 'Minicentrales meteorológicas conectadas a red y con placas solares' },
-    { url: '/investigacion/fitomonitorizacion/', title: 'Sensores de humedad del suelo, temperatura foliar y crecimiento' },
-    { url: '/investigacion/analisis-espectral/', title: 'Medidas espectrales por reflexión y transmisión' },
-    { url: '/investigacion/analisis-imagenes-ia/', title: 'Identificación visual de insectos, patógenos y cambios de color' },
-    { url: '/investigacion/diagnostico-fotografico/', title: 'Diagnóstico preliminar de enfermedades y carencias con IA' },
-    { url: '/investigacion/analisis-suelo/', title: 'Análisis de suelo y lectura de resultados para la explotación' },
-    { url: '/investigacion/madurez-recoleccion/', title: 'Seguimiento de azúcares, grasas y otros indicadores de cosecha' },
-    { url: '/investigacion/sensores-gases/', title: 'CO₂, etanol, monóxido de carbono y compuestos volátiles' }
+    { url: '/investigacion/app-agroclimatica/', title: 'App web: meteorología, alarmas y cálculo de riego', lastmod: '2026-09-28' },
+    { url: '/investigacion/estaciones-solares/', title: 'Minicentrales meteorológicas conectadas a red y con placas solares', lastmod: '2026-09-27' },
+    { url: '/investigacion/fitomonitorizacion/', title: 'Sensores de humedad del suelo, temperatura foliar y crecimiento', lastmod: '2026-09-27' },
+    { url: '/investigacion/analisis-espectral/', title: 'Medidas espectrales por reflexión y transmisión', lastmod: '2026-09-27' },
+    { url: '/investigacion/analisis-imagenes-ia/', title: 'Identificación visual de insectos, patógenos y cambios de color', lastmod: '2026-09-27' },
+    { url: '/investigacion/diagnostico-fotografico/', title: 'Diagnóstico preliminar de enfermedades y carencias con IA', lastmod: '2026-09-28' },
+    { url: '/investigacion/analisis-suelo/', title: 'Análisis de suelo y lectura de resultados para la explotación', lastmod: '2026-09-27' },
+    { url: '/investigacion/madurez-recoleccion/', title: 'Seguimiento de azúcares, grasas y otros indicadores de cosecha', lastmod: '2026-09-27' },
+    { url: '/investigacion/sensores-gases/', title: 'CO₂, etanol, monóxido de carbono y compuestos volátiles', lastmod: '2026-09-27' }
   ]
 };

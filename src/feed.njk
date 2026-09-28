@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
     <link>{{ site.url }}/recursos/</link>
     <description>Guías de cultivo y bitácora de campo del Altiplano y la Costa Tropical de Granada.</description>
     <language>es</language>
-    {%- set newest = (collections.recursos | getNewestCollectionItemDate) if collections.recursos.length else null %}
+    {%- set newest = (collections.recursos | getNewestUpdatedCollectionItemDate) if collections.recursos.length else null %}
     <lastBuildDate>{{ (newest or buildDate) | dateToRfc3339 }}</lastBuildDate>
     <atom:link href="{{ site.url }}{{ site.feed }}" rel="self" type="application/rss+xml"></atom:link>
     {%- for post in collections.recursos | reverse %}

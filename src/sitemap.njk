@@ -6,14 +6,28 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>{{ site.url }}/</loc>
-    <lastmod>{{ buildDate }}</lastmod>
+    <lastmod>{{ site.homeLastmod }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>{{ site.url }}/recursos/</loc>
+    <lastmod>{{ site.resourcesLastmod }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {%- for p in site.legalPages %}
+  <url>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <lastmod>{{ p.lastmod }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  {%- endfor %}
   {%- for p in site.researchPages %}
   <url>
     <loc>{{ site.url }}{{ p.url }}</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>{{ p.lastmod }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>

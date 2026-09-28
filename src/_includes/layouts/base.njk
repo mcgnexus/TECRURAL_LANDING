@@ -32,7 +32,7 @@
   {% block headExtra %}{% endblock %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
   {% block styles %}{% endblock %}
 </head>
 <body>
@@ -41,7 +41,7 @@
   <main id="inicio">{% block content %}{{ content | safe }}{% endblock %}</main>
   {% include "partials/footer.njk" %}
   {% include "partials/mobile-cta.njk" %}
+  <script defer src="/assets/site.js"></script>
   <script defer src="/assets/analytics.js"></script>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

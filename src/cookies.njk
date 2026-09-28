@@ -1,0 +1,39 @@
+---
+title: Cookies y analítica | TecRural
+description: Información sobre cookies, analítica de visitas y conexiones externas utilizadas en tecrural.es.
+canonicalPath: /cookies/
+permalink: /cookies/
+---
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/research.css">
+  <link rel="stylesheet" href="/assets/recursos.css">
+{% endblock %}
+{% block content %}
+<div class="wrap recursos-main">
+  <div class="breadcrumb"><a href="/">Inicio</a> / Cookies y analítica</div>
+  <article>
+    <header class="post-header">
+      <div class="eyebrow">Información legal</div>
+      <h1 class="page-title">Cookies y analítica</h1>
+      <p class="lead">Qué tecnologías usa la landing y qué conexiones de terceros realiza tu navegador.</p>
+      <div class="post-meta">Última actualización: <time datetime="2026-09-28">28 de septiembre de 2026</time></div>
+    </header>
+    <div class="prose">
+      <h2>Cookies en esta landing</h2>
+      <p>La landing no incorpora cookies publicitarias ni una cookie propia de preferencias. No tiene formularios, inicio de sesión ni un gestor de consentimiento de cookies.</p>
+
+      <h2>Analítica de Vercel</h2>
+      <p>En los dominios de producción previstos, el sitio carga el cliente de Vercel Web Analytics. El registro de visitas depende de que la función esté habilitada en Vercel. El script se solicita al mismo dominio y la integración no está configurada para publicidad. La forma en que el proveedor procesa las solicitudes puede consultarse en su <a href="https://vercel.com/docs/analytics/privacy-policy">información de privacidad para Vercel Analytics</a>.</p>
+
+      <h2>Google Fonts</h2>
+      <p>Para mostrar la tipografía, el navegador solicita recursos a <strong>fonts.googleapis.com</strong> y <strong>fonts.gstatic.com</strong>. Estas conexiones no son cookies de TecRural, pero sí comunican datos técnicos de la solicitud al proveedor. Más información en la <a href="https://policies.google.com/privacy">política de privacidad de Google</a>.</p>
+
+      <h2>Otros servicios TecRural</h2>
+      <p>Al abrir Meteo Huéscar o usar un enlace externo, pueden aplicarse las tecnologías y políticas de ese servicio o proveedor. Consulta las <a href="https://meteo.tecrural.es/cookies">políticas de cookies de Meteo Huéscar</a> y su <a href="https://meteo.tecrural.es/privacidad">política de privacidad</a>.</p>
+
+      <p>Si tienes dudas, escribe a <a href="mailto:mcgtecrural@gmail.com">mcgtecrural@gmail.com</a>. Para más información sobre el tratamiento de datos, consulta la <a href="/privacidad/">política de privacidad de TecRural</a>.</p>
+    </div>
+  </article>
+</div>
+{% endblock %}
