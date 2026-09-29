@@ -25,6 +25,17 @@ module.exports = function (eleventyConfig) {
     return content.replace(style[0], `<link rel="stylesheet" href="/assets/${cssFileName}">`);
   });
 
+  // Replace the malformed phone SVG in the contact block before sending the HTML to browsers.
+  eleventyConfig.addTransform('sanitize-homepage-phone-icon', function (content) {
+    const inputPath = (this.page?.inputPath || '').replace(/\\/g, '/');
+    if (!inputPath.endsWith('/src/index.njk') && inputPath !== 'src/index.njk') return content;
+
+    return content.replace(
+      /(<a href="tel:\+34614242716">)<svg[\s\S]*?<\/svg>/,
+      '$1<span class="phone-icon" aria-hidden="true">☎</span>'
+    );
+  });
+
   // Recursos existentes que se sirven tal cual (proyecto raíz -> salida)
   eleventyConfig.addPassthroughCopy({
     './assets': './assets',
