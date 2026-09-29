@@ -103,7 +103,7 @@ Dos líneas editoriales: **guías de cultivo** orientadas a búsqueda local (man
 
 ## Despliegue en Vercel
 
-El sitio está pensado para Vercel. La analítica de visitas y eventos está desactivada hasta que Web Analytics quede correctamente habilitado para el dominio de producción.
+El sitio está pensado para Vercel. Web Analytics está habilitado en el proyecto (`vercel project web-analytics enable`) y la plantilla base carga el snippet oficial, de modo que se registran visitas y eventos de conversión.
 
 - Importa el repositorio en Vercel. Al ser estático, no requiere *build command* ni *output directory*.
 - `vercel.json` ya define:
@@ -112,7 +112,7 @@ El sitio está pensado para Vercel. La analítica de visitas y eventos está des
   - HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, COOP y `Permissions-Policy`.
 - Dominios: `www.tecrural.es` como dominio principal y `tecrural.es` con **redirección a nivel de dominio** (`308`) hacia `www.tecrural.es`, configurada en el panel de Vercel (Domains → Edit → Redirect). Mantén `alarmas.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
 - DNS (gestionado en Cloudflare, proxy desactivado): `CNAME www → cname.vercel-dns.com` y `A @ → 76.76.21.21`. Tras apuntar el DNS, Vercel emite los certificados TLS automáticamente.
-- No se debe solicitar manualmente `/_vercel/insights/script.js` desde el cliente mientras devuelva 404. Antes de habilitar analítica, confirma que el dominio está asociado al proyecto correcto y que Web Analytics está activo en el panel de Vercel.
+- Web Analytics debe estar habilitado **antes** de desplegar: al activarlo, Vercel añade las rutas `/_vercel/insights/*` al siguiente despliegue. Si el snippet se publica antes de habilitarlo, `/_vercel/insights/script.js` devuelve 404. Comprueba tras desplegar con `curl -sI https://www.tecrural.es/_vercel/insights/script.js` que responde `200`.
 
 ## Líneas de investigación
 
@@ -130,7 +130,7 @@ El catálogo `/investigacion/` reúne nueve páginas independientes para explica
 
 ## Medición de visitas
 
-La analítica está temporalmente desactivada: la carga manual anterior de `/_vercel/insights/script.js` devolvía 404 en `www.tecrural.es`. No se contabilizan páginas ni eventos de conversión mientras no se confirme la integración oficial de Vercel Analytics en el proyecto y dominio correctos.
+La landing carga el snippet oficial de Vercel Web Analytics en `src/_includes/layouts/base.njk`. Los eventos de conversión se envían con `window.va('event', { name })` desde `assets/site.js`: `cta_hero_click`, `diagnostico_click`, `whatsapp_click`, `lead_form_start` y `lead_form_submit`. Los datos se consultan en el panel **Analytics** del proyecto de Vercel (o con `vercel` CLI / Web Analytics API).
 
 La app enlazada recibe parámetros UTM distintos desde cada línea de investigación para facilitar el seguimiento de las entradas si esos parámetros se conservan en la analítica de la app.
 
