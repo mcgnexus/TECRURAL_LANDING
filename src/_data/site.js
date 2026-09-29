@@ -7,8 +7,9 @@ module.exports = {
   phone: '+34614242716',
   phoneDisplay: '+34 614 242 716',
   whatsapp: 'https://wa.me/34614242716?text=Hola%20TecRural%2C%20quiero%20informaci%C3%B3n',
-  appUrl: 'https://meteo.tecrural.es/',
+  appUrl: 'https://alarmas.tecrural.es/',
   alarmasUrl: 'https://alarmas.tecrural.es/',
+  diagnosticoUrl: 'https://tecrural-diagnostico.vercel.app/',
   feed: '/feed.xml',
   // Actualizar estas fechas solo cuando cambie el contenido de la página correspondiente.
   homeLastmod: '2026-09-28',
@@ -23,7 +24,7 @@ module.exports = {
     { url: '/investigacion/fitomonitorizacion/', title: 'Sensores de humedad del suelo, temperatura foliar y crecimiento', lastmod: '2026-09-27' },
     { url: '/investigacion/analisis-espectral/', title: 'Medidas espectrales por reflexión y transmisión', lastmod: '2026-09-27' },
     { url: '/investigacion/analisis-imagenes-ia/', title: 'Identificación visual de insectos, patógenos y cambios de color', lastmod: '2026-09-27' },
-    { url: '/investigacion/diagnostico-fotografico/', title: 'Diagnóstico preliminar de enfermedades y carencias con IA', lastmod: '2026-09-28' },
+    { url: '/investigacion/diagnostico-fotografico/', title: 'Diagnóstico vegetal desde el móvil', lastmod: '2026-09-28' },
     { url: '/investigacion/analisis-suelo/', title: 'Análisis de suelo y lectura de resultados para la explotación', lastmod: '2026-09-27' },
     { url: '/investigacion/madurez-recoleccion/', title: 'Seguimiento de azúcares, grasas y otros indicadores de cosecha', lastmod: '2026-09-27' },
     { url: '/investigacion/sensores-gases/', title: 'CO₂, etanol, monóxido de carbono y compuestos volátiles', lastmod: '2026-09-27' }

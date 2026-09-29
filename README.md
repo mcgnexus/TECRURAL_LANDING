@@ -11,7 +11,8 @@ Web estática generada con [Eleventy](https://www.11ty.dev/) y desplegada en Ver
 - Tipografía: Manrope para titulares y DM Sans para texto de interfaz, ambas servidas desde Google Fonts con los pesos usados por el sitio.
 - La descripción de servicios, el alcance del diagnóstico y los precios orientativos se ajustaron según la [Wiki TecRural](https://github.com/mcgnexus/WIKI_TECRURAL).
 - Los planes Campo, Esencial, Monitor, Pro y Cooperativas, y sus importes, proceden del plan de empresa. Se identifican en la página como precios de planificación pendientes de validación comercial.
-- La aplicación enlazada es la URL de producción documentada: <https://meteo.tecrural.es/>.
+- La aplicación meteorológica y de alarmas enlazada es la URL de producción documentada: <https://alarmas.tecrural.es/>.
+- El prototipo de diagnóstico vegetal desde el móvil enlazado es: <https://tecrural-diagnostico.vercel.app/>.
 
 ## Personalización antes de activar captación directa
 
@@ -109,7 +110,7 @@ El sitio está pensado para Vercel, que es además el único entorno donde se ac
   - `cleanUrls` y `trailingSlash: true` para servir rutas limpias como `/investigacion/<linea>/` (coincidentes con el `canonical` y el sitemap).
   - Caché larga e inmutable para imágenes y caché moderada para JS/CSS, además de una CSP que restringe scripts a recursos propios y permite Google Fonts; las reglas de estilo inline se limitan a los atributos que aún se usan en el HTML.
   - HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, COOP y `Permissions-Policy`.
-- Dominios: `www.tecrural.es` como dominio principal y `tecrural.es` con **redirección a nivel de dominio** (`308`) hacia `www.tecrural.es`, configurada en el panel de Vercel (Domains → Edit → Redirect). Mantén `meteo.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
+- Dominios: `www.tecrural.es` como dominio principal y `tecrural.es` con **redirección a nivel de dominio** (`308`) hacia `www.tecrural.es`, configurada en el panel de Vercel (Domains → Edit → Redirect). Mantén `alarmas.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
 - DNS (gestionado en Cloudflare, proxy desactivado): `CNAME www → cname.vercel-dns.com` y `A @ → 76.76.21.21`. Tras apuntar el DNS, Vercel emite los certificados TLS automáticamente.
 - Activa **Web Analytics** en el panel del proyecto y vuelve a desplegar para empezar a contar visitas.
 
@@ -122,7 +123,7 @@ La portada presenta nueve páginas independientes para explicar la propuesta y c
 - [Sensores de humedad del suelo, temperatura foliar y crecimiento](./investigacion/fitomonitorizacion/)
 - [Medidas espectrales por reflexión y transmisión](./investigacion/analisis-espectral/)
 - [Identificación visual de insectos, patógenos y cambios de color](./investigacion/analisis-imagenes-ia/)
-- [Diagnóstico preliminar de enfermedades y carencias con IA](./investigacion/diagnostico-fotografico/)
+- [Diagnóstico vegetal desde el móvil](./investigacion/diagnostico-fotografico/)
 - [Análisis de suelo y lectura de resultados para la explotación](./investigacion/analisis-suelo/)
 - [Seguimiento de azúcares, grasas y otros indicadores de cosecha](./investigacion/madurez-recoleccion/)
 - [CO₂, etanol, monóxido de carbono y compuestos volátiles](./investigacion/sensores-gases/)

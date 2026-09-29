@@ -68,6 +68,6 @@ Ejemplo hipotético: una predicción municipal de mínima de 2 °C y una lectura
 
 ## Cómo lo integramos en TecRural
 
-Meteo Huéscar ofrece actualmente consulta meteorológica local y alertas automáticas, incluidas referencias a avisos oficiales de AEMET y RAIF. La predicción y los avisos de la aplicación siguen teniendo el alcance de sus fuentes y no sustituyen una medición en la finca. La personalización por parcela, los históricos y otras funciones se encuentran en desarrollo o evaluación; no se presentan aquí como prestaciones disponibles.
+Meteo Alarmas ofrece actualmente consulta meteorológica local y alertas automáticas, incluidas referencias a avisos oficiales de AEMET y RAIF. La predicción y los avisos de la aplicación siguen teniendo el alcance de sus fuentes y no sustituyen una medición en la finca. La personalización por parcela, los históricos y otras funciones se encuentran en desarrollo o evaluación; no se presentan aquí como prestaciones disponibles.
 
-Si quieres verlo con tus datos, [prueba la app](https://meteo.tecrural.es/?utm_source=web&utm_medium=blog&utm_campaign=recursos&utm_content=avisos-raif-siar-olivar) o escríbenos y lo revisamos juntos.
+Si quieres verlo con tus datos, [prueba la app](https://alarmas.tecrural.es/?utm_source=web&utm_medium=blog&utm_campaign=recursos&utm_content=avisos-raif-siar-olivar) o escríbenos y lo revisamos juntos.
