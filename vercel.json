@@ -2,6 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/assets/tecrural-icon.webp",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

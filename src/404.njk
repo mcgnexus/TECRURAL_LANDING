@@ -1,0 +1,33 @@
+---
+title: Página no encontrada | TecRural
+description: La dirección que buscas no existe o ha cambiado. Vuelve al inicio o explora las soluciones de TecRural.
+canonicalPath: /404.html
+permalink: /404.html
+eleventyExcludeFromCollections: true
+robots: noindex, follow
+---
+{% extends "layouts/base.njk" %}
+{% block styles %}
+  <link rel="stylesheet" href="/assets/research.css">
+  <style>
+    .not-found{min-height:min(62vh,620px);display:grid;place-content:center;text-align:center;padding:48px 0}
+    .not-found .eyebrow{justify-content:center}
+    .not-found h1{font:800 clamp(36px,6vw,58px)/1.1 Manrope,sans-serif;letter-spacing:-2px;color:var(--forest);margin:14px 0}
+    .not-found p{max-width:540px;margin:0 auto;color:var(--muted);font-size:17px}
+    .not-found-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+    @media(max-width:600px){.not-found{min-height:55vh;padding:36px 0}.not-found p{font-size:15px}.not-found-actions{display:grid;grid-template-columns:1fr}}
+  </style>
+{% endblock %}
+{% block content %}
+  <section class="wrap not-found" aria-labelledby="not-found-title">
+    <div>
+      <div class="eyebrow">Error 404</div>
+      <h1 id="not-found-title">Página no encontrada</h1>
+      <p>La dirección que buscas no existe o ha cambiado.</p>
+      <div class="not-found-actions">
+        <a class="button button-dark" href="/">Volver al inicio</a>
+        <a class="button button-light" href="/#soluciones">Ver soluciones</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
