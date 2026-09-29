@@ -132,6 +132,8 @@ El catálogo `/investigacion/` reúne nueve páginas independientes para explica
 
 La landing carga el snippet oficial de Vercel Web Analytics en `src/_includes/layouts/base.njk`. Los eventos de conversión se envían con `window.va('event', { name })` desde `assets/site.js`: `cta_hero_click`, `diagnostico_click`, `whatsapp_click`, `lead_form_start` y `lead_form_submit`. Los datos se consultan en el panel **Analytics** del proyecto de Vercel (o con `vercel` CLI / Web Analytics API).
 
+Speed Insights está habilitado en el proyecto y su snippet (`/_vercel/speed-insights/script.js`) va también en la plantilla base. Mide Core Web Vitals (LCP, INP, CLS) sobre visitas reales y se consulta con `vercel metrics vercel.speed_insights.lcp_ms --prod --group-by route --since 7d` o en el panel de Vercel.
+
 La app enlazada recibe parámetros UTM distintos desde cada línea de investigación para facilitar el seguimiento de las entradas si esos parámetros se conservan en la analítica de la app.
 
 ## Diagramas y rigor de contenido
