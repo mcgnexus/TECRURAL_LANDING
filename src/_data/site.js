@@ -9,16 +9,17 @@ module.exports = {
   whatsapp: 'https://wa.me/34614242716?text=Hola%20TecRural%2C%20quiero%20informaci%C3%B3n',
   appUrl: 'https://alarmas.tecrural.es/',
   alarmasUrl: 'https://alarmas.tecrural.es/',
-  diagnosticoUrl: 'https://tecrural-diagnostico.vercel.app/',
+  diagnosticoUrl: 'https://diagnostico.tecrural.es/',
   feed: '/feed.xml',
   // Actualizar estas fechas solo cuando cambie el contenido de la página correspondiente.
-  homeLastmod: '2026-09-28',
+  homeLastmod: '2026-09-29',
   resourcesLastmod: '2026-09-28',
   legalPages: [
     { url: '/privacidad/', lastmod: '2026-09-28' },
     { url: '/cookies/', lastmod: '2026-09-28' }
   ],
   researchPages: [
+    { url: '/investigacion/', title: 'Investigación y desarrollo agrícola de TecRural', lastmod: '2026-09-29' },
     { url: '/investigacion/app-agroclimatica/', title: 'App web: meteorología, alarmas y cálculo de riego', lastmod: '2026-09-28' },
     { url: '/investigacion/estaciones-solares/', title: 'Minicentrales meteorológicas conectadas a red y con placas solares', lastmod: '2026-09-27' },
     { url: '/investigacion/fitomonitorizacion/', title: 'Sensores de humedad del suelo, temperatura foliar y crecimiento', lastmod: '2026-09-27' },

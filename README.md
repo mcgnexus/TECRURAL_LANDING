@@ -12,7 +12,7 @@ Web estática generada con [Eleventy](https://www.11ty.dev/) y desplegada en Ver
 - La descripción de servicios, el alcance del diagnóstico y los precios orientativos se ajustaron según la [Wiki TecRural](https://github.com/mcgnexus/WIKI_TECRURAL).
 - Los planes Campo, Esencial, Monitor, Pro y Cooperativas, y sus importes, proceden del plan de empresa. Se identifican en la página como precios de planificación pendientes de validación comercial.
 - La aplicación meteorológica y de alarmas enlazada es la URL de producción documentada: <https://alarmas.tecrural.es/>.
-- El prototipo de diagnóstico vegetal desde el móvil enlazado es: <https://tecrural-diagnostico.vercel.app/>.
+- La app operativa de diagnóstico vegetal desde el móvil es: <https://diagnostico.tecrural.es/>.
 
 ## Personalización antes de activar captación directa
 
@@ -103,7 +103,7 @@ Dos líneas editoriales: **guías de cultivo** orientadas a búsqueda local (man
 
 ## Despliegue en Vercel
 
-El sitio está pensado para Vercel, que es además el único entorno donde se activa la analítica (`assets/analytics.js`).
+El sitio está pensado para Vercel. La analítica de visitas y eventos está desactivada hasta que Web Analytics quede correctamente habilitado para el dominio de producción.
 
 - Importa el repositorio en Vercel. Al ser estático, no requiere *build command* ni *output directory*.
 - `vercel.json` ya define:
@@ -112,11 +112,11 @@ El sitio está pensado para Vercel, que es además el único entorno donde se ac
   - HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options`, COOP y `Permissions-Policy`.
 - Dominios: `www.tecrural.es` como dominio principal y `tecrural.es` con **redirección a nivel de dominio** (`308`) hacia `www.tecrural.es`, configurada en el panel de Vercel (Domains → Edit → Redirect). Mantén `alarmas.tecrural.es` como proyecto o dominio aparte para no sobrescribir la app meteorológica.
 - DNS (gestionado en Cloudflare, proxy desactivado): `CNAME www → cname.vercel-dns.com` y `A @ → 76.76.21.21`. Tras apuntar el DNS, Vercel emite los certificados TLS automáticamente.
-- Activa **Web Analytics** en el panel del proyecto y vuelve a desplegar para empezar a contar visitas.
+- No se debe solicitar manualmente `/_vercel/insights/script.js` desde el cliente mientras devuelva 404. Antes de habilitar analítica, confirma que el dominio está asociado al proyecto correcto y que Web Analytics está activo en el panel de Vercel.
 
 ## Líneas de investigación
 
-La portada presenta nueve páginas independientes para explicar la propuesta y comparar el interés por cada tema. Cada ruta `/investigacion/<linea>/` genera una página vista diferenciada en Vercel Web Analytics.
+El catálogo `/investigacion/` reúne nueve páginas independientes para explicar las líneas de trabajo de TecRural.
 
 - [App web: meteorología, alarmas y cálculo de riego](./investigacion/app-agroclimatica/)
 - [Minicentrales meteorológicas conectadas a red y con placas solares](./investigacion/estaciones-solares/)
@@ -130,7 +130,7 @@ La portada presenta nueve páginas independientes para explicar la propuesta y c
 
 ## Medición de visitas
 
-El archivo `assets/analytics.js` carga el script oficial de Vercel Web Analytics en dominios Vercel (`*.vercel.app`, `tecrural.es` y `www.tecrural.es`). Para activar el conteo, despliega el repositorio en Vercel y habilita **Web Analytics** en el panel del proyecto. Después de desplegar de nuevo, consulta Analytics → Pages para comparar visitas por página. En GitHub Pages y en vista local no se carga el script. Las visitas indican interés de lectura, no por sí solas una solicitud comercial.
+La analítica está temporalmente desactivada: la carga manual anterior de `/_vercel/insights/script.js` devolvía 404 en `www.tecrural.es`. No se contabilizan páginas ni eventos de conversión mientras no se confirme la integración oficial de Vercel Analytics en el proyecto y dominio correctos.
 
 La app enlazada recibe parámetros UTM distintos desde cada línea de investigación para facilitar el seguimiento de las entradas si esos parámetros se conservan en la analítica de la app.
 
