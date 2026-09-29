@@ -1,4 +1,5 @@
 const { rssPlugin } = require('@11ty/eleventy-plugin-rss');
+const crypto = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -10,15 +11,18 @@ module.exports = function (eleventyConfig) {
     const inputPath = (this.page?.inputPath || '').replace(/\\/g, '/');
     if (!inputPath.endsWith('/src/index.njk') && inputPath !== 'src/index.njk') return content;
 
-    const style = content.match(/<style>([\s\S]*?)<\/style>/i);
+    const styles = Array.from(content.matchAll(/<style>([\s\S]*?)<\/style>/gi));
+    const style = styles.find(match => match[1].includes(':root{--forest:'));
     if (!style) return content;
 
     const outputDir = path.dirname(this.page.outputPath);
-    const cssPath = path.join(outputDir, 'assets', 'landing.css');
+    const cssHash = crypto.createHash('sha256').update(style[1]).digest('hex').slice(0, 12);
+    const cssFileName = `landing-${cssHash}.css`;
+    const cssPath = path.join(outputDir, 'assets', cssFileName);
     fs.mkdirSync(path.dirname(cssPath), { recursive: true });
     fs.writeFileSync(cssPath, style[1], 'utf8');
 
-    return content.replace(style[0], '<link rel="stylesheet" href="/assets/landing.css">');
+    return content.replace(style[0], `<link rel="stylesheet" href="/assets/${cssFileName}">`);
   });
 
   // Recursos existentes que se sirven tal cual (proyecto raíz -> salida)
