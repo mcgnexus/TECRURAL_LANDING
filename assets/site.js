@@ -59,8 +59,8 @@
   var hero = document.querySelector('.hero');
   var contactSection = document.querySelector('#contacto');
   var footer = document.querySelector('footer');
-  if (stickyCta && hero && 'IntersectionObserver' in window) {
-    var heroIsVisible = true;
+  if (stickyCta && 'IntersectionObserver' in window) {
+    var heroIsVisible = !!hero;
     var contactIsVisible = false;
     var footerIsVisible = false;
     var updateStickyCta = function () {
@@ -76,7 +76,7 @@
       });
       updateStickyCta();
     }, { threshold: 0 });
-    ctaObserver.observe(hero);
+    if (hero) ctaObserver.observe(hero);
     if (contactSection) ctaObserver.observe(contactSection);
     if (footer) ctaObserver.observe(footer);
   }

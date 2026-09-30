@@ -99,7 +99,8 @@ heroPreload: /assets/olivar-sensores.webp
       .wrap{width:min(100% - 40px,1160px)}
       .topbar{position:sticky;top:0;z-index:20;height:auto;min-height:80px;padding:7px 0;background:rgba(246,247,241,.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(227,232,222,.8)}
       .nav{gap:clamp(10px,2vw,18px);font-size:12px}
-      .nav .nav-cta{padding:11px 14px}
+      .nav>a:not(.nav-cta){display:inline-flex;align-items:center;min-height:44px}
+      .nav .nav-cta{padding:11px 14px;display:inline-flex;align-items:center;min-height:44px}
       .hero{grid-template-columns:1fr;gap:22px;min-height:0;padding:33px 0 35px}
       .hero-copy{max-width:650px}
       .hero-photo,.hero-photo img{min-height:0;height:auto;aspect-ratio:1.75 / 1}
@@ -116,6 +117,7 @@ heroPreload: /assets/olivar-sensores.webp
       .method-inner{grid-template-columns:1fr;gap:22px}
       .founder{gap:34px}
       .region{gap:34px}
+      .region-image{height:auto;aspect-ratio:1.5/1}
       .contact-inner{align-items:flex-start}
     }
     @media(max-width:760px){
@@ -345,6 +347,7 @@ heroPreload: /assets/olivar-sensores.webp
     @media(max-height:500px) and (orientation:landscape) and (max-width:900px){.mobile-cta{display:none}}
     @media(max-width:600px){.contact-actions{display:block}.contact-actions .button{margin-top:12px}}
     .service .more,.contact-list a,.footer-copy a{display:inline-flex;align-items:center;min-height:44px;padding-block:10px}
+    @media(min-width:851px){.nav>a:not(.nav-cta){display:inline-flex;align-items:center;min-height:44px}}
     .lead-form label{font-size:14px}
     .lead-form .form-consent{font-size:13px}
     @media(max-width:600px){

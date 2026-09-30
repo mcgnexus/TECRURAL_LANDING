@@ -43,9 +43,11 @@
 @media(max-width:600px){.crop-context{display:block;margin:-14px 0 13px;padding:12px 14px}.crop-context strong{display:block;margin-bottom:3px}.crop-regions{grid-template-columns:1fr}.crop-regions p{font-size:11px!important}}
 
 /* Mejoras de ajuste para tablets, móviles pequeños y controles táctiles. */
-.research-hero>div,.research-visual,.detail-card,.commercial-band>div{min-width:0}
+.research-hero>div,.research-visual,.detail-card,.commercial-band>div,.research-cta>div{min-width:0}
 .research-hero h1,.section-block h2,.detail-card h3,.commercial-band h3{overflow-wrap:anywhere}
 .button,.nav a,.related-links a{touch-action:manipulation}
+.research-cta>div{flex:1 1 auto}
+.research-cta .button{flex:0 0 auto;white-space:nowrap}
 @media(max-width:760px){
   .research-cta{display:block;padding:27px 24px}
   .research-cta .button{width:100%;margin-top:18px;white-space:normal}
@@ -113,3 +115,10 @@
   .process-flow strong{font-size:12px}
   .process-flow span:last-child{font-size:11px}
 }
+
+/* Keep research figures within their content column on narrow screens. */
+.research-visual{margin:0}
+.nav .nav-cta{display:inline-flex;align-items:center;min-height:44px}
+@media(min-width:601px){.nav>a:not(.nav-cta){display:inline-flex;align-items:center;min-height:44px}}
+@media(max-width:600px){.nav>a[href$='#investigacion']{display:inline-flex;align-items:center;min-height:44px;font-size:11px}}
+@media(max-width:370px){.nav>a[href$='#investigacion']{font-size:10px}}
