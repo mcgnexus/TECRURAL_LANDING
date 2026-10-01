@@ -12,6 +12,7 @@ module.exports = {
   diagnosticoUrl: 'https://diagnostico.tecrural.es/',
   feed: '/feed.xml',
   ga4Id: 'G-JFQSWMQ5HR',
+  clarityId: 'yqv05kz980',
   // Actualizar estas fechas solo cuando cambie el contenido de la página correspondiente.
   homeLastmod: '2026-09-29',
   resourcesLastmod: '2026-09-28',
