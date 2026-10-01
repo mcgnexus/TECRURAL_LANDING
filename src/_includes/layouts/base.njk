@@ -31,10 +31,20 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} · Recursos" href="{{ site.url }}{{ site.feed }}">
   {% block headExtra %}{% endblock %}
   <style>html.mobile-menu-open,body.mobile-menu-open{overflow:hidden}</style>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
   {% block styles %}{% endblock %}
+  {% if site.ga4Id %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4Id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.ga4Id }}');
+  </script>
+  {% endif %}
 </head>
 <body>
   <a class="skip-link" href="{{ anchorPrefix }}#inicio">Saltar al contenido principal</a>
