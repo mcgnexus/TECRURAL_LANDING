@@ -8,8 +8,8 @@ categoryLabel: Guía
 zone: Altiplano de Granada
 crops: ["olivar"]
 hero: /assets/blog/repilo-hojas-manchas.webp
-ogImage: /assets/blog/repilo-inspeccion-lupa.jpg
-ogImageAlt: "Agricultor inspecciona hojas de olivo con una lupa en un olivar del Altiplano"
+ogImage: /assets/blog/repilo-hojas-manchas.jpg
+ogImageAlt: "Hojas de olivo con manchas circulares oscuras y halo amarillento, síntomas posibles de repilo"
 heroAlt: "Hojas de olivo con manchas circulares oscuras y halo amarillento, síntomas posibles de repilo"
 heroCaption: "Manchas circulares oscuras con halo amarillento en hojas de olivo. Imagen ilustrativa; la confirmación requiere valoración técnica."
 permalink: /recursos/guias/repilo-olivar-altiplano/
@@ -24,10 +24,6 @@ related:
 En otoño conviene volver a vigilar **el repilo**, una enfermedad que puede verse favorecida cuando coinciden humedad elevada o agua sobre las hojas durante varias horas y temperaturas suaves. Pero **que haya llovido no significa, por sí solo, que todos los olivares necesiten un tratamiento**: influyen las condiciones de cada parcela, el estado del cultivo y la presencia de síntomas.
 
 La RAIF recomienda realizar un seguimiento de la enfermedad y valorar la incidencia en la parcela antes de decidir una actuación. En sus recomendaciones de septiembre de 2026 también recuerda que la llegada del otoño no implica automáticamente tratar.
-
-<figure class="research-visual research-visual-image">
-  <img src="/assets/blog/repilo-portada.webp" alt="Portada: hoja de olivo con manchas de repilo en un olivar del Altiplano de Granada, con el texto «¿Repilo en tu olivar? Qué observar antes de tratar»" loading="lazy" decoding="async" style="aspect-ratio:auto">
-</figure>
 
 ## Qué observar en las hojas
 
@@ -45,11 +41,6 @@ Cuando inspecciones tu finca:
 2. **Observa ambas caras de las hojas** y busca manchas circulares oscuras, con o sin halo amarillento.
 3. **Anota qué árboles y zonas presentan síntomas** y si la copa está especialmente densa o poco aireada.
 4. **Consulta la información fitosanitaria vigente** y valora la situación concreta de tu parcela antes de tomar decisiones.
-
-<figure class="research-visual research-visual-image">
-  <img src="/assets/blog/repilo-inspeccion-lupa.webp" alt="Agricultor inspecciona hojas de olivo con una lupa en un olivar del Altiplano de Granada" loading="lazy" decoding="async">
-  <figcaption>La inspección en campo sirve para orientar la revisión; no sustituye la valoración de un técnico.</figcaption>
-</figure>
 
 Si las señales no están claras o hay un deterioro importante, consulta con un técnico. La identificación de síntomas puede orientar la revisión, pero no sustituye una evaluación profesional de la parcela.
 
